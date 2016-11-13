@@ -11,8 +11,8 @@ For web platform only platform and enviroment is required, since rest can be fou
 
 Why not just use User-Agent
  - User-Agent is missing some of these details
- - User-Agent is hard to extend / override
- - User-Agent in mobile apps is default their client OkHttp, Alamo Fire etc
+ - User-Agent can be hard to extend / override
+ - Default User-Agent in iOS & Android can be their client (OkHttp, Alamo Fire etc)
 
 #Installation
 
