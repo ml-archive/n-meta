@@ -2,10 +2,15 @@ import Vapor
 import HTTP
 
 final class MetaMiddleware: Middleware {
+    let drop: Droplet
+
+    init(drop: Droplet) {
+        self.drop = drop
+    }
     func respond(to request: Request, chainingTo next: Responder) throws -> Response {
         let response = try next.respond(to: request)
 
-        if(try request.isMetaRequired()) {
+        if(try request.isMetaRequired(drop: drop)) {
             // Guard header config
             guard let headerStr = drop.config["meta", "header"]?.string else {
                 throw Abort.custom(status: .internalServerError, message: "Meta error - Missing meta.header config")
@@ -17,7 +22,7 @@ final class MetaMiddleware: Middleware {
             }
 
             // Apply request
-            try request.meta = Meta(meta: meta)
+            try request.meta = Meta(drop: drop, meta: meta)
         }
 
         return response

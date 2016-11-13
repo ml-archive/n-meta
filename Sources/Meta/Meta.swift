@@ -1,6 +1,6 @@
 import Vapor
 final class Meta {
-
+    let drop: Droplet
     let platform: String
     let environment: String
     let version: String
@@ -10,11 +10,12 @@ final class Meta {
     let deviceOs: String
     let device: String
 
-    init(meta: String) throws {
+    init(drop: Droplet, meta: String) throws {
+        self.drop = drop
         let metaArr = meta.components(separatedBy: ";")
 
         // Set platform
-        let platforms = try Meta.platforms()
+        let platforms = try Meta.platforms(drop: drop)
         if (metaArr.count < 1 || !platforms.contains(metaArr[0])) {
             throw Abort.custom(status: .badRequest, message: "Platform is not supported")
         }
@@ -22,7 +23,7 @@ final class Meta {
         self.platform = metaArr[0];
 
         // Set environment
-        let environments = try Meta.environments()
+        let environments = try Meta.environments(drop: drop)
         if(metaArr.count < 2 || !environments.contains(metaArr[1])) {
             throw Abort.custom(status: .badRequest, message: "Environment is not supported")
         }
@@ -69,7 +70,7 @@ final class Meta {
         self.device = metaArr[4]
     }
 
-    static func platforms() throws -> [String] {
+    static func platforms(drop: Droplet) throws -> [String] {
         // Get from config
         guard let platforms = drop.config["meta", "platforms"]?.array else {
             throw Abort.custom(status: .internalServerError, message: "Meta error - meta.platforms config is missing or not an array")
@@ -88,7 +89,7 @@ final class Meta {
         return strictPlatforms;
     }
 
-    static func environments() throws -> [String] {
+    static func environments(drop: Droplet) throws -> [String] {
         // Get config
         guard let envirionments = drop.config["meta", "environments"]?.array else {
             throw Abort.custom(status: .internalServerError, message: "Meta error - meta.environments config is missing or not an array")
@@ -107,7 +108,7 @@ final class Meta {
         return strictEnvironments;
     }
 
-    static func requiredEnvironments() throws -> [String] {
+    static func requiredEnvironments(drop: Droplet) throws -> [String] {
         // Get config
         guard let requiredEnvironments = drop.config["meta", "requiredEnvironments"]?.array else {
             throw Abort.custom(status: .internalServerError, message: "Meta error - meta.requiredEnvironments config is missing or not an array")
@@ -126,7 +127,7 @@ final class Meta {
         return strictRequiredEnvironments;
     }
 
-    static func exceptPaths() throws -> [String] {
+    static func exceptPaths(drop: Droplet) throws -> [String] {
         // Get config
         guard let exceptPaths = drop.config["meta", "exceptedPaths"]?.array else {
             throw Abort.custom(status: .internalServerError, message: "Meta error - meta.exceptPaths config is missing or not an array")
