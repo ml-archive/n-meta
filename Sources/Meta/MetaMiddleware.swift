@@ -1,25 +1,23 @@
 import Vapor
-import Fluent
-import Foundation
 import HTTP
 
-final class NMetaMiddleware: Middleware {
+final class MetaMiddleware: Middleware {
     func respond(to request: Request, chainingTo next: Responder) throws -> Response {
         let response = try next.respond(to: request)
         
         if(try request.isNMetaRequired()) {
             // Guard header config
-            guard let headerStr = drop.config["nmeta", "header"]?.string else {
-                throw Abort.custom(status: .internalServerError, message: "N-Meta error - Missing nmeta.header config")
+            guard let headerStr = drop.config["meta", "header"]?.string else {
+                throw Abort.custom(status: .internalServerError, message: "Meta error - Missing meta.header config")
             }
             
             // Guard header is in request
-            guard let nMeta = request.headers[HeaderKey(headerStr)]?.string else {
+            guard let meta = request.headers[HeaderKey(headerStr)]?.string else {
                 throw Abort.custom(status: .badRequest, message: "Missing \(headerStr) header")
             }
             
             // Apply request
-            try request.nMeta = NMeta(nMeta: nMeta)
+            try request.meta = meta(meta: meta)
         }
         
         return response
