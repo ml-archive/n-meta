@@ -2,7 +2,7 @@ import HTTP
 import Vapor
 
 extension Request {
-    var meta: Meta? {
+    public var meta: Meta? {
         get { return storage["meta"] as? Meta }
         set { storage["meta"] = newValue }
     }
