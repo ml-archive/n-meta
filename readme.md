@@ -1,9 +1,18 @@
-This package is created to enforce important information about the client
+This package enforces clients to send a specific header in all requests. 
 
-User-Agent header covers some of the important fields. But is missing few also.
-On top of that it's not always possible to override
+This header can look like this android;production;1.2.3;4.4;Samsung S7
+ - platform
+ - environment
+ - app version
+ - device os
+ - device
 
-Here in Nodes we decided to enforce a strict pattern for this.
+For web platform only platform and enviroment is required, since rest can be found in User-Agent
+
+Why not just use User-Agent
+ - User-Agent is missing some of these details
+ - User-Agent is hard to extend / override
+ - User-Agent in mobile apps is default their client OkHttp, Alamo Fire etc
 
 #Installation
 
