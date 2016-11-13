@@ -1,3 +1,6 @@
+#### Config
+
+```
 {
     "header": "N-Meta",
     "platforms": [
@@ -13,7 +16,6 @@
         "production"
     ],
     "exceptedPaths": [
-        "/test"
     ],
     "requiredEnvironments": [
         "local",
@@ -22,3 +24,4 @@
         "production"
     ]
 }
+```
