@@ -1,0 +1,24 @@
+{
+    "header": "N-Meta",
+    "platforms": [
+        "web",
+        "android",
+        "ios",
+        "windows"
+    ],
+    "environments": [
+        "local",
+        "development",
+        "staging",
+        "production"
+    ],
+    "exceptedPaths": [
+        "/test"
+    ],
+    "requiredEnvironments": [
+        "local",
+        "development",
+        "staging",
+        "production"
+    ]
+}
