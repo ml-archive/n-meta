@@ -2,29 +2,28 @@ import HTTP
 import Vapor
 
 extension Request {
+
     public var meta: Meta? {
         get { return storage["meta"] as? Meta }
         set { storage["meta"] = newValue }
     }
 
-    func isMetaRequired(drop: Droplet) throws -> Bool {
+    public func isMetaRequired(configuration: Configuration, drop: Droplet) throws -> Bool {
         // Only APIs
-        if(accept.prefers("html")) {
-            return false;
-        }
-
-        // Check environments
-        let requiredEnvironments = try Meta.requiredEnvironments(drop: drop)
-        if(!requiredEnvironments.contains(drop.environment.description)) {
+        if accept.prefers("html") {
             return false
         }
 
-        // Check paths
-        let exceptPaths = try Meta.exceptPaths(drop: drop)
-        if(exceptPaths.contains(uri.path)) {
+        // Check required environments
+        if !configuration.requiredEnvironments.contains(drop.environment.description) {
             return false
         }
 
-        return true;
+        // Check except paths
+        if configuration.exceptPaths.contains(uri.path) {
+            return false
+        }
+
+        return true
     }
 }
