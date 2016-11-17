@@ -2,30 +2,26 @@ import Vapor
 import HTTP
 
 public final class MetaMiddleware: Middleware {
+
     let drop: Droplet
+    let configuration: Configuration
 
-    public init(drop: Droplet) {
+    public init(drop: Droplet) throws {
         self.drop = drop
+        self.configuration = try Configuration(drop: drop)
     }
+
     public func respond(to request: Request, chainingTo next: Responder) throws -> Response {
-        if(try request.isMetaRequired(drop: drop)) {
-            // Guard header config
-            guard let headerStr = drop.config["meta", "header"]?.string else {
-                throw Abort.custom(status: .internalServerError, message: "Meta error - Missing meta.header config")
-            }
-
-            // Guard header is in request
-            guard let meta = request.headers[HeaderKey(headerStr)]?.string else {
-                throw Abort.custom(status: .badRequest, message: "Missing \(headerStr) header")
-            }
-
-            // Apply request
-            try request.meta = Meta(drop: drop, meta: meta)
+        // Check if meta is required
+        guard try request.isMetaRequired(configuration: configuration, drop: drop) else {
+            return try next.respond(to: request)
         }
 
-        let response = try next.respond(to: request)
+        // Extract and add meta to request
+        let metaString = try configuration.extractHeaderString(withRequest: request)
+        request.meta   = try Meta(configuration: configuration, meta: metaString)
 
-        return response
+        return try next.respond(to: request)
     }
 }
 
