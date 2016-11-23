@@ -52,5 +52,5 @@ import Meta
 
 And add middleware
 ```
-drop.middleware.append(MetaMiddleware(drop: drop))
+try drop.middleware.append(MetaMiddleware(drop: drop))
 ```
