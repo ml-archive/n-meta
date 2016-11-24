@@ -34,7 +34,7 @@ Create config meta.json
         "staging",
         "production"
     ],
-    "exceptedPaths": [
+    "exceptPaths": [
     ],
     "requiredEnvironments": [
         "local",
