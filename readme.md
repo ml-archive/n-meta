@@ -17,6 +17,11 @@ Why not just use User-Agent
 #Installation
 
 #### Config
+Update your `Package.swift` file.
+```swift
+.Package(url: "https://github.com/nodes-vapor/Meta", majorVersion: 0)
+```
+
 Create config meta.json
 
 ```
