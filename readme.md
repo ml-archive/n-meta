@@ -7,6 +7,8 @@
 
 This package enforces clients to send a specific header in all requests. 
 
+### [PLATFORM];[ENVIROMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
+
 This header can look like this android;production;1.2.3;4.4;Samsung S7
  - platform
  - environment
@@ -24,6 +26,11 @@ Why not just use User-Agent
 #Installation
 
 #### Config
+Update your `Package.swift` file.
+```swift
+.Package(url: "https://github.com/nodes-vapor/meta", majorVersion: 0)
+```
+
 Create config meta.json
 
 ```
@@ -41,7 +48,7 @@ Create config meta.json
         "staging",
         "production"
     ],
-    "exceptedPaths": [
+    "exceptPaths": [
     ],
     "requiredEnvironments": [
         "local",
