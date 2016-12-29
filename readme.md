@@ -1,3 +1,10 @@
+# Meta
+[![Language](https://img.shields.io/badge/Swift-3-brightgreen.svg)](http://swift.org)
+[![Build Status](https://travis-ci.org/nodes-vapor/meta.svg?branch=master)](https://travis-ci.org/nodes-vapor/meta)
+[![codecov](https://codecov.io/gh/nodes-vapor/meta/branch/master/graph/badge.svg)](https://codecov.io/gh/nodes-vapor/meta)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nodes-vapor/meta/master/LICENSE)
+
+
 This package enforces clients to send a specific header in all requests. 
 
 This header can look like this android;production;1.2.3;4.4;Samsung S7
