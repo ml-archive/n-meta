@@ -19,6 +19,11 @@ extension Request {
             return false
         }
 
+        // Bypass CORS requests
+        if method.equals(any: .options) {
+            return false
+        }
+
         // Check except paths
         if configuration.exceptPaths.contains(uri.path) {
             return false
