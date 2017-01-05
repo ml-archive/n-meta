@@ -1,5 +1,6 @@
 import HTTP
 import Vapor
+import Foundation
 
 extension Request {
 
@@ -19,14 +20,25 @@ extension Request {
             return false
         }
 
+
         // Bypass CORS requests
         if method.equals(any: .options) {
             return false
         }
 
-        // Check except paths
-        if configuration.exceptPaths.contains(uri.path) {
-            return false
+        // Except paths
+        for check: String in configuration.exceptPaths {
+             // Check complete except paths
+            if check == uri.path {
+                return false
+            }
+            
+            // Check except paths and subfolders
+            if check.characters.last == "*" {
+                if uri.path.hasPrefix(check.substring(to: check.index(check.endIndex, offsetBy: -1))) {
+                    return false
+                }
+            }
         }
 
         return true
