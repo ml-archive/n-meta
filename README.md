@@ -49,6 +49,10 @@ Create config meta.json
         "production"
     ],
     "exceptPaths": [
+        "/js/*",
+        "/css/*",
+        "/images/*",
+        "/favicons/*"
     ],
     "requiredEnvironments": [
         "local",
