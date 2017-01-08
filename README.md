@@ -67,8 +67,13 @@ Create config meta.json
 ```
 import Meta
 ```
-
-And add middleware
+Add middleware direcetly to your api groups
+```swift
+drop.group(MetaMiddleware(drop: drop)) { metaRoutes in
+     //Routes
+}
 ```
+or add middleware global (will be loaded for all requests)
+```swift
 try drop.middleware.append(MetaMiddleware(drop: drop))
 ```
