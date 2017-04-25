@@ -1,5 +1,5 @@
 import XCTest
-@testable import MetaTests
+@testable import Meta
 
 class MetaTests: XCTestCase {
     func test() {

@@ -16,8 +16,11 @@ public struct Configuration {
         }
 
         var error: Abort {
-            return .custom(status: .internalServerError,
-                           message: "Meta error - \(rawValue) config is missing.")
+            return Abort(
+                .internalServerError,
+                metadata: nil,
+                reason: "Meta error - \(rawValue) config is missing."
+            )
         }
     }
 
@@ -67,7 +70,11 @@ public struct Configuration {
 extension Configuration {
     public func extractHeaderString(withRequest request: Request) throws -> String {
         guard let metaString = request.headers[headerKey]?.string else {
-            throw Abort.custom(status: .badRequest, message: "Missing \(headerKey.key) header.")
+            throw Abort(
+                .badRequest,
+                metadata: nil,
+                reason: "Missing \(headerKey.key) header."
+            )
         }
         return metaString
     }

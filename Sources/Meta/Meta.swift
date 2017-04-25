@@ -14,14 +14,22 @@ public struct Meta {
 
         // Set platform
         guard !components.isEmpty && configuration.platforms.contains(components[0]) else {
-            throw Abort.custom(status: .badRequest, message: "Platform is not supported.")
+            throw Abort(
+                .badRequest,
+                metadata: nil,
+                reason: "Platform is not supported."
+            )
         }
 
         self.platform = components.removeFirst()
 
         // Set environment
         guard !components.isEmpty && configuration.environments.contains(components[0]) else {
-            throw Abort.custom(status: .badRequest, message: "Environment is not supported.")
+            throw Abort(
+                .badRequest,
+                metadata: nil,
+                reason: "Environment is not supported."
+            )
         }
 
         self.environment = components.removeFirst()
@@ -36,21 +44,33 @@ public struct Meta {
 
         // Set version
         guard !components.isEmpty else {
-            throw Abort.custom(status: .badRequest, message: "Missing version.")
+            throw Abort(
+                .badRequest,
+                metadata: nil,
+                reason: "Missing version."
+            )
         }
 
         version = try Version(string: components.removeFirst())
 
         // Set device os
         guard !components.isEmpty else {
-            throw Abort.custom(status: .badRequest, message: "Missing device os.")
+            throw Abort(
+                .badRequest,
+                metadata: nil,
+                reason: "Missing device os."
+            )
         }
 
         self.deviceOs = components.removeFirst()
 
         // Set device
         guard !components.isEmpty else {
-            throw Abort.custom(status: .badRequest, message: "Missing device.")
+            throw Abort(
+                .badRequest,
+                metadata: nil,
+                reason: "Missing device."
+            )
         }
 
         self.device = components.removeFirst()
@@ -61,21 +81,21 @@ public struct Meta {
 
 extension Meta: NodeConvertible {
 
-    public init(node: Node, in context: Context) throws {
-        platform    = try node.extract("platform")
-        environment = try node.extract("environment")
-        version     = try node.extract("version")
-        deviceOs    = try node.extract("deviceOs")
-        device      = try node.extract("device")
+    public init(node: Node) throws {
+        platform    = try node.get("platform")
+        environment = try node.get("environment")
+        version     = try node.get("version")
+        deviceOs    = try node.get("deviceOs")
+        device      = try node.get("device")
     }
 
-    public func makeNode(context: Context) throws -> Node {
-        return Node([
-            "platform": platform.makeNode(),
-            "environment": environment.makeNode(),
-            "version": try version.makeNode(),
-            "deviceOs": deviceOs.makeNode(),
-            "device": device.makeNode()
+    public func makeNode(in context: Context?) throws -> Node {
+        return try Node(node: [
+            "platform": Node(platform),
+            "environment": Node(environment),
+            "version": Node(node: version),
+            "deviceOs": Node(deviceOs),
+            "device": Node(device)
             ])
     }
 }
