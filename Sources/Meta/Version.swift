@@ -14,7 +14,11 @@ public struct Version {
         var numbers    = components.flatMap({ $0.int })
 
         guard !numbers.isEmpty else {
-            throw Abort.custom(status: .badRequest, message: "Missing version number.")
+            throw Abort(
+                .badRequest,
+                metadata: nil,
+                reason: "Missing version number."
+            )
         }
 
         major = numbers.removeFirst()
@@ -24,13 +28,13 @@ public struct Version {
 }
 
 extension Version: NodeConvertible {
-    public init(node: Node, in context: Context) throws {
-        major = try node.extract("major")
-        minor = try node.extract("minor")
-        patch = try node.extract("patch")
+    public init(node: Node) throws {
+        major = try node.get("major")
+        minor = try node.get("minor")
+        patch = try node.get("patch")
     }
 
-    public func makeNode(context: Context) throws -> Node {
+    public func makeNode(in context: Context?) throws -> Node {
         return Node([
             "major": Node(major),
             "minor": Node(minor),

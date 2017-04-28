@@ -14,15 +14,14 @@ extension Request {
         if accept.prefers("html") {
             return false
         }
-
         // Check required environments
-        if !configuration.requiredEnvironments.contains(drop.environment.description) {
+        if !configuration.requiredEnvironments.contains(drop.config.environment.description) {
             return false
         }
 
 
         // Bypass CORS requests
-        if method.equals(any: .options) {
+        if method == .options {
             return false
         }
 
