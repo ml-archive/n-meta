@@ -9,7 +9,7 @@ This package enforces clients to send a specific header in all requests.
 
 ### [PLATFORM];[ENVIROMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
 
-This header can look like this android;production;1.2.3;4.4;Samsung S7
+This header can look like this `android;production;1.2.3;4.4;Samsung S7`
  - platform
  - environment
  - app version
@@ -23,7 +23,7 @@ Why not just use User-Agent
  - User-Agent can be hard to extend / override
  - Default User-Agent in iOS & Android can be their client (OkHttp, Alamo Fire etc)
 
-#Installation
+# Installation
 
 #### Config
 Update your `Package.swift` file.
@@ -31,7 +31,7 @@ Update your `Package.swift` file.
 .Package(url: "https://github.com/nodes-vapor/meta", majorVersion: 0)
 ```
 
-Create config meta.json
+Create config `meta.json`
 
 ```
 {
@@ -63,7 +63,7 @@ Create config meta.json
 }
 ```
 
-### main.swift
+### `main.swift`
 ```
 import Meta
 ```
