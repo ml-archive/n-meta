@@ -71,7 +71,7 @@ Create config `meta.json`:
 
 ## Getting started 🚀
 
-```
+```swift
 import Meta
 ```
 
