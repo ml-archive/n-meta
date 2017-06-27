@@ -33,7 +33,7 @@ Why not just use `User-Agent`?
 
 Update your `Package.swift` file.
 ```swift
-.Package(url: "https://github.com/nodes-vapor/meta", majorVersion: 0)
+.Package(url: "https://github.com/nodes-vapor/meta", majorVersion: 1)
 ```
 
 Create config `meta.json`:
