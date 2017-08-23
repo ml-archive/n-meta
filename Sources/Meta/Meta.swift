@@ -4,12 +4,10 @@ import Foundation
 public struct Meta {
     private enum RawMetaConfig {
         static let delimiter = ";"
-        static let size = 5
-        static let platformIndex = 0
-        static let environementIndex = 1
-        static let versionIndex = 2
-        static let deviceOsIndex = 3
-        static let deviceIndex = 4
+        static let webPlatform = "web"
+        static let webVersion = "0.0.0"
+        static let webDeviceOs = "N/A"
+        static let webDevice = "N/A"
     }
 
     public let platform: String
@@ -19,21 +17,47 @@ public struct Meta {
     public let device: String
 
     public init(raw: String) throws {
-        let components = raw.components(separatedBy: RawMetaConfig.delimiter)
-        guard components.count == RawMetaConfig.size else {
-            throw Abort(
-                .internalServerError,
-                metadata: nil,
-                reason: "Meta header has wrong format. Expected \(RawMetaConfig.size) compoennts, got \(components.count)."
+        var components = raw.components(separatedBy: RawMetaConfig.delimiter)
+
+        // Platform.
+        try Meta.assertItemsLeft(components, errorMessage: "Platform missing.")
+        let platform = components.removeFirst()
+
+        // Environment.
+        try Meta.assertItemsLeft(components, errorMessage: "Environment missing.")
+        let environment = components.removeFirst()
+
+        // Since web is normally using a valid User-Agent there is no reason
+        // to ask for more.
+        guard platform != RawMetaConfig.webPlatform else {
+            try self.init(
+                platform: platform,
+                environment: environment,
+                version: RawMetaConfig.webVersion,
+                deviceOs: RawMetaConfig.webDeviceOs,
+                device: RawMetaConfig.webDevice
             )
+            return
         }
 
+        // Version.
+        try Meta.assertItemsLeft(components, errorMessage: "Version missing.")
+        let version = components.removeFirst()
+
+        // Device OS.
+        try Meta.assertItemsLeft(components, errorMessage: "Device OS missing.")
+        let deviceOs = components.removeFirst()
+
+        // Device.
+        try Meta.assertItemsLeft(components, errorMessage: "Device missing.")
+        let device = components.removeFirst()
+
         try self.init(
-            platform: components[RawMetaConfig.platformIndex],
-            environment: components[RawMetaConfig.environementIndex],
-            version: components[RawMetaConfig.versionIndex],
-            deviceOs: components[RawMetaConfig.deviceOsIndex],
-            device: components[RawMetaConfig.deviceIndex]
+            platform: platform,
+            environment: environment,
+            version: version,
+            deviceOs: deviceOs,
+            device: device
         )
     }
 
@@ -50,14 +74,6 @@ public struct Meta {
         // Set environment
         self.environment = environment
 
-        // Since web is normally using a valid User-Agent there is no reason for asking for more.
-        if platform == "web" {
-            self.version  = try Version(string: "0.0.0")
-            self.deviceOs = "N/A"
-            self.device   = "N/A"
-            return
-        }
-
         // Set version
         self.version = try Version(string: version)
 
@@ -66,6 +82,16 @@ public struct Meta {
 
         // Set device
         self.device = device
+    }
+
+
+    // MARK: Helper functions.
+
+    private static func assertItemsLeft(_ : [String], errorMessage: String) throws {
+        throw Abort(
+            .badRequest,
+            reason: errorMessage
+        )
     }
 }
 
