@@ -27,7 +27,8 @@ public struct Configuration {
             )
         }
 
-        headerKey = try metaConfig.get(Keys.header.rawValue)
+        let key: String = try metaConfig.get(Keys.header.rawValue)
+        headerKey = HeaderKey(key)
         platforms = try Configuration.extractArray(
             from: metaConfig,
             forKey: .platforms
