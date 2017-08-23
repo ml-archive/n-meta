@@ -28,7 +28,6 @@ internal struct MetaHandler {
             return false
         }
 
-
         // Bypass CORS requests
         if request.method == .options {
             return false
