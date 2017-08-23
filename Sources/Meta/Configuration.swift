@@ -4,6 +4,7 @@ import HTTP
 
 public struct Configuration {
     private enum Keys: String {
+        case meta
         case header
         case platforms
         case environments
@@ -19,24 +20,31 @@ public struct Configuration {
     internal let environment: Environment
 
     internal init(_ config: Config) throws {
-        headerKey = try config.get(Keys.header.rawValue)
+        guard let metaConfig: Config = config[Keys.meta.rawValue] else {
+            throw Abort(
+                .internalServerError,
+                reason: "Meta error - meta config is missing."
+            )
+        }
+
+        headerKey = try metaConfig.get(Keys.header.rawValue)
         platforms = try Configuration.extractArray(
-            from: config,
+            from: metaConfig,
             forKey: .platforms
         )
         environments = try Configuration.extractArray(
-            from: config,
+            from: metaConfig,
             forKey: .environments
         )
         exceptPaths = try Configuration.extractArray(
-            from: config,
+            from: metaConfig,
             forKey: .exceptPaths
         )
         requiredEnvironments = try Configuration.extractArray(
-            from: config,
+            from: metaConfig,
             forKey: .requiredEnvironments
         )
-        environment = config.environment
+        environment = metaConfig.environment
     }
 
     private static func extractArray(
