@@ -2,6 +2,15 @@ import Vapor
 import Foundation
 
 public struct Meta {
+    private enum RawMetaConfig {
+        static let delimiter = ";"
+        static let size = 5
+        static let platformIndex = 0
+        static let environementIndex = 1
+        static let versionIndex = 2
+        static let deviceOsIndex = 3
+        static let deviceIndex = 4
+    }
 
     public let platform: String
     public let environment: String
@@ -9,32 +18,39 @@ public struct Meta {
     public let deviceOs: String
     public let device: String
 
-    public init(configuration: Configuration, meta: String) throws {
-        var components = meta.components(separatedBy: ";")
-
-        // Set platform
-        guard !components.isEmpty && configuration.platforms.contains(components[0]) else {
+    public init(raw: String) throws {
+        let components = raw.components(separatedBy: RawMetaConfig.delimiter)
+        guard components.count == RawMetaConfig.size else {
             throw Abort(
-                .badRequest,
+                .internalServerError,
                 metadata: nil,
-                reason: "Platform is not supported."
+                reason: "Meta header has wrong format. Expected \(RawMetaConfig.size) compoennts, got \(components.count)."
             )
         }
 
-        self.platform = components.removeFirst()
+        try self.init(
+            platform: components[RawMetaConfig.platformIndex],
+            environment: components[RawMetaConfig.environementIndex],
+            version: components[RawMetaConfig.versionIndex],
+            deviceOs: components[RawMetaConfig.deviceOsIndex],
+            device: components[RawMetaConfig.deviceIndex]
+        )
+    }
+
+    public init(
+        platform: String,
+        environment: String,
+        version: String,
+        deviceOs: String,
+        device: String
+    ) throws {
+        // Set platform
+        self.platform = platform
 
         // Set environment
-        guard !components.isEmpty && configuration.environments.contains(components[0]) else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Environment is not supported."
-            )
-        }
+        self.environment = environment
 
-        self.environment = components.removeFirst()
-
-        // Since web is normally using a valid User-Agent there is no reason for asking for more
+        // Since web is normally using a valid User-Agent there is no reason for asking for more.
         if platform == "web" {
             self.version  = try Version(string: "0.0.0")
             self.deviceOs = "N/A"
@@ -43,44 +59,19 @@ public struct Meta {
         }
 
         // Set version
-        guard !components.isEmpty else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Missing version."
-            )
-        }
-
-        version = try Version(string: components.removeFirst())
+        self.version = try Version(string: version)
 
         // Set device os
-        guard !components.isEmpty else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Missing device os."
-            )
-        }
-
-        self.deviceOs = components.removeFirst()
+        self.deviceOs = deviceOs
 
         // Set device
-        guard !components.isEmpty else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Missing device."
-            )
-        }
-
-        self.device = components.removeFirst()
+        self.device = device
     }
 }
 
 // MARK: - NodeConvertible -
 
 extension Meta: NodeConvertible {
-
     public init(node: Node) throws {
         platform    = try node.get("platform")
         environment = try node.get("environment")
@@ -96,6 +87,6 @@ extension Meta: NodeConvertible {
             "version": Node(node: version),
             "deviceOs": Node(deviceOs),
             "device": Node(device)
-            ])
+        ])
     }
 }
