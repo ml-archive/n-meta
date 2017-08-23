@@ -73,22 +73,25 @@ Create config `meta.json`:
 ## Getting started 🚀
 
 ```swift
-import Meta
+import class Meta.Middleware
 ```
 
-Add middleware direcetly to your api groups:
+Add middleware direcetly to your API groups (e.g. in `Droplet+Setup.swift`):
 
 ```swift
-drop.group(MetaMiddleware(drop: drop)) { metaRoutes in
-     //Routes
+let metaMiddleware = try Meta.Middleware(config: self.config)
+self.group(middleware: [metaMiddleware]) { metaRoutes in
+    // ...
 }
 ```
 
-or add middleware global (will be loaded for all requests):
+or add the middleware globally (e.g. in `Config+Setup.swift`) which will add it to all routes:
 
 ```swift
-try drop.middleware.append(MetaMiddleware(drop: drop))
+addConfigurable(middleware: Meta.Middleware.init, name: "meta")
 ```
+
+Don't forget to add the middleware to your `droplet.json` config as well.
 
 
 ## 🏆 Credits
