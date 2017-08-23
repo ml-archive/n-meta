@@ -87,11 +87,13 @@ public struct Meta {
 
     // MARK: Helper functions.
 
-    private static func assertItemsLeft(_ : [String], errorMessage: String) throws {
-        throw Abort(
-            .badRequest,
-            reason: errorMessage
-        )
+    private static func assertItemsLeft(_ items: [String], errorMessage: String) throws {
+        guard !items.isEmpty else {
+            throw Abort(
+                .badRequest,
+                reason: errorMessage
+            )
+        }
     }
 }
 
