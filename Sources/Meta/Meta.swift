@@ -2,6 +2,13 @@ import Vapor
 import Foundation
 
 public struct Meta {
+    private enum RawMetaConfig {
+        static let delimiter = ";"
+        static let webPlatform = "web"
+        static let webVersion = "0.0.0"
+        static let webDeviceOs = "N/A"
+        static let webDevice = "N/A"
+    }
 
     public let platform: String
     public let environment: String
@@ -9,78 +16,90 @@ public struct Meta {
     public let deviceOs: String
     public let device: String
 
-    public init(configuration: Configuration, meta: String) throws {
-        var components = meta.components(separatedBy: ";")
+    public init(raw: String) throws {
+        var components = raw.components(separatedBy: RawMetaConfig.delimiter)
 
-        // Set platform
-        guard !components.isEmpty && configuration.platforms.contains(components[0]) else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Platform is not supported."
+        // Platform.
+        try Meta.assertItemsLeft(components, errorMessage: "Platform missing.")
+        let platform = components.removeFirst()
+
+        // Environment.
+        try Meta.assertItemsLeft(components, errorMessage: "Environment missing.")
+        let environment = components.removeFirst()
+
+        // Since web is normally using a valid User-Agent there is no reason
+        // to ask for more.
+        guard platform != RawMetaConfig.webPlatform else {
+            try self.init(
+                platform: platform,
+                environment: environment,
+                version: RawMetaConfig.webVersion,
+                deviceOs: RawMetaConfig.webDeviceOs,
+                device: RawMetaConfig.webDevice
             )
-        }
-
-        self.platform = components.removeFirst()
-
-        // Set environment
-        guard !components.isEmpty && configuration.environments.contains(components[0]) else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Environment is not supported."
-            )
-        }
-
-        self.environment = components.removeFirst()
-
-        // Since web is normally using a valid User-Agent there is no reason for asking for more
-        if platform == "web" {
-            self.version  = try Version(string: "0.0.0")
-            self.deviceOs = "N/A"
-            self.device   = "N/A"
             return
         }
 
-        // Set version
-        guard !components.isEmpty else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Missing version."
-            )
-        }
+        // Version.
+        try Meta.assertItemsLeft(components, errorMessage: "Version missing.")
+        let version = components.removeFirst()
 
-        version = try Version(string: components.removeFirst())
+        // Device OS.
+        try Meta.assertItemsLeft(components, errorMessage: "Device OS missing.")
+        let deviceOs = components.removeFirst()
+
+        // Device.
+        try Meta.assertItemsLeft(components, errorMessage: "Device missing.")
+        let device = components.removeFirst()
+
+        try self.init(
+            platform: platform,
+            environment: environment,
+            version: version,
+            deviceOs: deviceOs,
+            device: device
+        )
+    }
+
+    public init(
+        platform: String,
+        environment: String,
+        version: String,
+        deviceOs: String,
+        device: String
+    ) throws {
+        // Set platform
+        self.platform = platform
+
+        // Set environment
+        self.environment = environment
+
+        // Set version
+        self.version = try Version(string: version)
 
         // Set device os
-        guard !components.isEmpty else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Missing device os."
-            )
-        }
-
-        self.deviceOs = components.removeFirst()
+        self.deviceOs = deviceOs
 
         // Set device
-        guard !components.isEmpty else {
+        self.device = device
+    }
+
+
+    // MARK: Helper functions.
+
+    private static func assertItemsLeft(_ items: [String], errorMessage: String) throws {
+        guard !items.isEmpty else {
             throw Abort(
                 .badRequest,
-                metadata: nil,
-                reason: "Missing device."
+                reason: errorMessage
             )
         }
-
-        self.device = components.removeFirst()
     }
 }
 
 // MARK: - NodeConvertible -
 
 extension Meta: NodeConvertible {
-
     public init(node: Node) throws {
         platform    = try node.get("platform")
         environment = try node.get("environment")
@@ -96,6 +115,6 @@ extension Meta: NodeConvertible {
             "version": Node(node: version),
             "deviceOs": Node(deviceOs),
             "device": Node(device)
-            ])
+        ])
     }
 }

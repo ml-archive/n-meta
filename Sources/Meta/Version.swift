@@ -1,15 +1,15 @@
 import Vapor
 
 public struct Version {
-    let major: Int
-    let minor: Int
-    let patch: Int
+    public let major: Int
+    public let minor: Int
+    public let patch: Int
 
-    var string: String {
+    public var string: String {
         return "\(major).\(minor).\(patch)"
     }
 
-    init(string: String) throws {
+    public init(string: String) throws {
         let components = string.components(separatedBy: ".")
         var numbers    = components.flatMap({ $0.int })
 
@@ -39,6 +39,6 @@ extension Version: NodeConvertible {
             "major": Node(major),
             "minor": Node(minor),
             "patch": Node(patch)
-            ])
+        ])
     }
 }
