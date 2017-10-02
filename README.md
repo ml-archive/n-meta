@@ -22,7 +22,7 @@ This header can look like this `android;production;1.2.3;4.4;Samsung S7`
  - device os
  - device
 
-For web platform only platform and enviroment is required, since the rest can be found in `User-Agent`.
+For web platform only platform and environment is required, since the rest can be found in `User-Agent`.
 
 Why not just use `User-Agent`?
  - `User-Agent` is missing some of these details
