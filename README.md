@@ -22,7 +22,7 @@ This header can look like this `android;production;1.2.3;4.4;Samsung S7`
  - device os
  - device
 
-For web platform only platform and enviroment is required, since rest can be found in `User-Agent`.
+For web platform only platform and environment is required, since the rest can be found in `User-Agent`.
 
 Why not just use `User-Agent`?
  - `User-Agent` is missing some of these details
@@ -76,7 +76,7 @@ Create config `meta.json`:
 import class Meta.Middleware
 ```
 
-Add middleware direcetly to your API groups (e.g. in `Droplet+Setup.swift`):
+Add middleware directly to your API groups (e.g. in `Droplet+Setup.swift`):
 
 ```swift
 let metaMiddleware = try Meta.Middleware(config: self.config)
@@ -97,7 +97,7 @@ Don't forget to add the middleware to your `droplet.json` config as well.
 ## 🏆 Credits
 
 This package is developed and maintained by the Vapor team at [Nodes](https://www.nodesagency.com).
-The package owner for this project is [John](https://github.com/Mircea-Ciuchea).
+The package owner for this project is [John](https://github.com/John-Ciuchea).
 
 
 ## 📄 License
