@@ -12,7 +12,7 @@
 This package enforces clients to send a specific header in all requests:
 
 ```
-[PLATFORM];[ENVIROMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
+[PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
 ```
 
 This header can look like this `android;production;1.2.3;4.4;Samsung S7`
