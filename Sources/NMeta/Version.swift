@@ -3,20 +3,20 @@ public struct Version {
     public let minor: Int
     public let patch: Int
     
+    enum NMetaVersionError: String, Error {
+        case missingVersionNumber
+    }
+    
     public var string: String {
         return "\(major).\(minor).\(patch)"
     }
     
     public init(string: String) throws {
         let components = string.components(separatedBy: ".")
-        var numbers    = components.flatMap({ $0.int })
+        var numbers    = components.compactMap({ Int($0) })
         
         guard !numbers.isEmpty else {
-            throw Abort(
-                .badRequest,
-                metadata: nil,
-                reason: "Missing version number."
-            )
+            throw NMetaVersionError.missingVersionNumber
         }
         
         major = numbers.removeFirst()
