@@ -4,6 +4,8 @@ import Vapor
 
 public final class NMetaMiddleware: Middleware, Service {
     
+    public init() {}
+    
     /// See `Middleware.respond(to:)`
     public func respond(to request: Request, chainingTo next: Responder) throws -> Future<Response> {
         return try next.respond(to: request).map(to: Response.self) { res in
@@ -16,8 +18,7 @@ public final class NMetaMiddleware: Middleware, Service {
             }
             
             // Extract and add meta to request.
-            let a = try nMetaHandler.metaOrFail(request: request)
-            //request.privateContainer.services.register(a)
+            try request.make(NMetaContainerService.self).nMeta = try nMetaHandler.metaOrFail(request: request)
             
             return res
         }

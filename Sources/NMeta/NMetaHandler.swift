@@ -45,20 +45,8 @@ internal struct NMetaHandler {
             }
             
             // Check except paths and subfolders
-            if check.stringValue.last == "*" {
-                if request.http.urlString.hasPrefix(
-                    //check[check.index..<check.endIndex]
-                    
-                    check.substring(
-                        to: check.index(
-                            check.endIndex,
-                            offsetBy: -1
-                        )
-                    )
-                    
-                    ) {
-                    return false
-                }
+            if check.stringValue.last == "*" && request.http.urlString.hasPrefix(String(check.stringValue.dropLast())) {
+                return false
             }
         }
         
@@ -67,7 +55,11 @@ internal struct NMetaHandler {
     
     internal func metaOrFail(request: Request) throws -> NMeta {
         guard let metaString = request.http.headers.firstValue(name: HTTPHeaderName(headerKey)) else {
-            throw NMetaError.headerMissing // Missing header
+            throw NMetaError.headerMissing
+        }
+        
+        if metaString.isEmpty {
+            throw NMetaError.headerIsEmpty
         }
         
         // Build meta header.
@@ -76,12 +68,12 @@ internal struct NMetaHandler {
         // Validate meta header.
         // Validate platform.
         guard platforms.contains(meta.platform) else {
-            throw NMetaError.platformMissing // Missing platform
+            throw NMetaError.platformUnsupported
         }
         
         // Validate environment.
         guard environments.contains(meta.environment) else {
-            throw NMetaError.environmentMissing // Missing env
+            throw NMetaError.environmentUnsupported
         }
         
         return meta

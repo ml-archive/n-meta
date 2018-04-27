@@ -8,6 +8,9 @@ enum NMetaError: String, Error {
     case deviceOSMissing
     case deviceMissing
     case headerMissing
+    case platformUnsupported
+    case environmentUnsupported
+    case headerIsEmpty
 }
 
 extension NMetaError: AbortError {
@@ -24,6 +27,9 @@ extension NMetaError: AbortError {
             case .deviceOSMissing: return "Platform missing"
             case .deviceMissing: return "Platform missing"
             case .headerMissing: return "Header missing"
+            case .platformUnsupported: return "Platform unsupported"
+            case .environmentUnsupported: return "Environment unsupported"
+            case .headerIsEmpty: return "Header is empty"
         }
     }
     
@@ -36,6 +42,9 @@ extension NMetaError: AbortError {
             case .deviceOSMissing: return .badRequest
             case .deviceMissing: return .badRequest
             case .headerMissing: return .badRequest
+            case .platformUnsupported: return .badRequest
+            case .environmentUnsupported: return .badRequest
+            case .headerIsEmpty: return .badRequest
         }
     }
 }

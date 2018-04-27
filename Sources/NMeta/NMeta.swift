@@ -1,6 +1,14 @@
 import Foundation
+import Vapor
 
-public struct NMeta {
+public class NMetaContainerService: Service {
+
+    public init() {}
+    
+    var nMeta: NMeta?
+}
+
+public struct NMeta: Service {
     private enum RawMetaConfig {
         static let delimiter = ";"
         static let webPlatform = "web"
@@ -14,14 +22,6 @@ public struct NMeta {
     public let version: Version
     public let deviceOs: String
     public let device: String
-    
-    enum NMetaError: String, Error {
-        case platformMissing
-        case environmentMissing
-        case versionMissing
-        case DeviceOSMissing
-        case DeviceMissing
-    }
     
     public init(raw: String) throws {
         var components = raw.components(separatedBy: RawMetaConfig.delimiter)
@@ -52,11 +52,11 @@ public struct NMeta {
         let version = components.removeFirst()
         
         // Device OS.
-        try NMeta.assertItemsLeft(components, error: NMetaError.DeviceOSMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.deviceOSMissing)
         let deviceOs = components.removeFirst()
         
         // Device.
-        try NMeta.assertItemsLeft(components, error: NMetaError.DeviceMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.deviceMissing)
         let device = components.removeFirst()
         
         try self.init(
