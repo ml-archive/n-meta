@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Meta {
+public struct NMeta {
     private enum RawMetaConfig {
         static let delimiter = ";"
         static let webPlatform = "web"
@@ -27,11 +27,11 @@ public struct Meta {
         var components = raw.components(separatedBy: RawMetaConfig.delimiter)
         
         // Platform.
-        try Meta.assertItemsLeft(components, error: NMetaError.platformMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.platformMissing)
         let platform = components.removeFirst()
         
         // Environment.
-        try Meta.assertItemsLeft(components, error: NMetaError.environmentMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.environmentMissing)
         let environment = components.removeFirst()
         
         // Since web is normally using a valid User-Agent there is no reason
@@ -48,15 +48,15 @@ public struct Meta {
         }
         
         // Version.
-        try Meta.assertItemsLeft(components, error: NMetaError.versionMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.versionMissing)
         let version = components.removeFirst()
         
         // Device OS.
-        try Meta.assertItemsLeft(components, error: NMetaError.DeviceOSMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.DeviceOSMissing)
         let deviceOs = components.removeFirst()
         
         // Device.
-        try Meta.assertItemsLeft(components, error: NMetaError.DeviceMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.DeviceMissing)
         let device = components.removeFirst()
         
         try self.init(
