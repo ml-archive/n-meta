@@ -11,8 +11,13 @@
 This package enforces clients to send a specific header in all requests:
 
 ```
-[PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
+NMeta: [PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
 ```
+
+For earlier support
+[Vapor 1.x](https://github.com/nodes-vapor/n-meta/tree/vapor-1)
+[Vapor 2.x](https://github.com/nodes-vapor/n-meta/tree/vapor-2)
+
 
 This header can look like this `android;production;1.2.3;4.4;Samsung S7`
  - platform
