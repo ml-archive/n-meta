@@ -1,15 +1,16 @@
 import XCTest
-@testable import Meta
+@testable import meta
 
-class MetaTests: XCTestCase {
-    func test() {
-        XCTAssertTrue(true)
+class metaTests: XCTestCase {
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct
+        // results.
+        XCTAssertEqual(meta().text, "Hello, World!")
     }
 
 
-    static var allTests : [(String, (MetaTests) -> () throws -> Void)] {
-        return [
-            ("test", test),
-        ]
-    }
+    static var allTests = [
+        ("testExample", testExample),
+    ]
 }
