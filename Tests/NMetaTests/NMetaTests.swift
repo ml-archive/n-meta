@@ -70,11 +70,12 @@ class NMetaTests: XCTestCase {
         }
     }
     
-    func testNMetaIncorrectVersionNumber() throws {
+    func testNMetaIncorrectVersion() throws {
         XCTAssertThrowsError(try NMeta(raw: "a;b;c;d;e")) { error in
             XCTAssertEqual(error as? NMetaError, NMetaError.versionIsIncorrectFormat)
         }
     }
+    
     static var allTests = [
         ("testVersionFull", testVersionFull),
         ("testVersionMinor", testVersionMinor),
@@ -85,7 +86,7 @@ class NMetaTests: XCTestCase {
         ("testNMetaMissingVersion", testNMetaMissingVersion),
         ("testNMetaMissingDeviceOs", testNMetaMissingDeviceOs),
         ("testNMetaMissingDevice", testNMetaMissingDevice),
-        ("testNMetaIncorrectVersionNumber", testNMetaIncorrectVersionNumber),
+        ("testNMetaIncorrectVersion", testNMetaIncorrectVersion),
         
     ]
 }
