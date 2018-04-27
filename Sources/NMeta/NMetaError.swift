@@ -11,6 +11,7 @@ enum NMetaError: String, Error {
     case platformUnsupported
     case environmentUnsupported
     case headerIsEmpty
+    case nMetaIsNotAttachedToRequest
 }
 
 extension NMetaError: AbortError {
@@ -30,6 +31,7 @@ extension NMetaError: AbortError {
             case .platformUnsupported: return "Platform unsupported"
             case .environmentUnsupported: return "Environment unsupported"
             case .headerIsEmpty: return "Header is empty"
+            case .nMetaIsNotAttachedToRequest: return "NMeta is not attached to request. This is most likely cause the middleware is not used on the route"
         }
     }
     
@@ -45,6 +47,7 @@ extension NMetaError: AbortError {
             case .platformUnsupported: return .badRequest
             case .environmentUnsupported: return .badRequest
             case .headerIsEmpty: return .badRequest
+            case .nMetaIsNotAttachedToRequest: return .internalServerError
         }
     }
 }
