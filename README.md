@@ -15,7 +15,9 @@ NMeta: [PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
 ```
 
 For earlier support
+
 [Vapor 1.x](https://github.com/nodes-vapor/n-meta/tree/vapor-1)
+
 [Vapor 2.x](https://github.com/nodes-vapor/n-meta/tree/vapor-2)
 
 
