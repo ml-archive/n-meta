@@ -9,10 +9,6 @@ internal struct NMetaHandler {
     private let exceptPaths: [String]
     private let requiredEnvironments: [String]
     
-    enum NMetaHandlerErrors: Error {
-        case TODO
-    }
-    
     internal init(_ config: NMetaConfig) throws {
         self.environment = try Environment.detect()
         self.headerKey = config.headerKey
@@ -71,7 +67,7 @@ internal struct NMetaHandler {
     
     internal func metaOrFail(request: Request) throws -> NMeta {
         guard let metaString = request.http.headers.firstValue(name: HTTPHeaderName(headerKey)) else {
-            throw NMetaHandlerErrors.TODO // Missing header
+            throw NMetaError.headerMissing // Missing header
         }
         
         // Build meta header.
@@ -80,12 +76,12 @@ internal struct NMetaHandler {
         // Validate meta header.
         // Validate platform.
         guard platforms.contains(meta.platform) else {
-            throw NMetaHandlerErrors.TODO // Missing platform
+            throw NMetaError.platformMissing // Missing platform
         }
         
         // Validate environment.
         guard environments.contains(meta.environment) else {
-            throw NMetaHandlerErrors.TODO // Missing env
+            throw NMetaError.environmentMissing // Missing env
         }
         
         return meta
