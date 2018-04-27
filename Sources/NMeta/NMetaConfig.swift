@@ -4,7 +4,7 @@ import Vapor
 /// Config options for a `NMetaConfig`
 public struct NMetaConfig: ServiceType {
     // The request header, which is meta data will be exctracted from
-    public let header: String
+    public let headerKey: String
     
     // The supported platforms
     public let platforms: [String]
@@ -20,13 +20,13 @@ public struct NMetaConfig: ServiceType {
     
     /// Creates a new `NMetaConfig`.
     public init(
-        header: String = "N-Meta",
+        headerKey: String = "N-Meta",
         platforms: [String] = ["web", "android", "ios"],
         environments: [String] = ["local", "development", "staging", "production"],
         exceptPaths: [String] = [ "/js/*", "/css/*", "/images/*", "/favicons/*", "/admin/*"],
         requiredEnvironments: [String] = ["local", "development", "staging", "production"])
     {
-        self.header = header
+        self.headerKey = headerKey
         self.platforms = platforms
         self.environments = environments
         self.exceptPaths = exceptPaths
