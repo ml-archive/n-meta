@@ -31,4 +31,3 @@ public struct NMetaConfiguration {
         self.requiredEnvironments = requiredEnvironments
     }
 }
-
