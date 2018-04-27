@@ -4,8 +4,8 @@ enum NMetaError: String, Error {
     case platformMissing
     case environmentMissing
     case versionMissing
-    case versionNumberMissing
-    case deviceOSMissing
+    case versionIsIncorrectFormat
+    case deviceOsMissing
     case deviceMissing
     case headerMissing
     case platformUnsupported
@@ -22,11 +22,11 @@ extension NMetaError: AbortError {
     var reason: String {
         switch self {
             case .platformMissing: return "Platform missing"
-            case .environmentMissing: return "Platform missing"
-            case .versionMissing: return "Platform missing"
-            case .versionNumberMissing: return "Platform missing"
-            case .deviceOSMissing: return "Platform missing"
-            case .deviceMissing: return "Platform missing"
+            case .environmentMissing: return "Environment missing"
+            case .versionMissing: return "Version missing"
+            case .versionIsIncorrectFormat: return "Version format incorrect. Format is 1.2.3 (major.minor.patch)"
+            case .deviceOsMissing: return "DeviceOs missing"
+            case .deviceMissing: return "Device missing"
             case .headerMissing: return "Header missing"
             case .platformUnsupported: return "Platform unsupported"
             case .environmentUnsupported: return "Environment unsupported"
@@ -40,8 +40,8 @@ extension NMetaError: AbortError {
             case .platformMissing: return .badRequest
             case .environmentMissing: return .badRequest
             case .versionMissing: return .badRequest
-            case .versionNumberMissing: return .badRequest
-            case .deviceOSMissing: return .badRequest
+            case .versionIsIncorrectFormat: return .badRequest
+            case .deviceOsMissing: return .badRequest
             case .deviceMissing: return .badRequest
             case .headerMissing: return .badRequest
             case .platformUnsupported: return .badRequest
@@ -58,4 +58,4 @@ extension NMetaError: Debuggable {
         return rawValue
     }
 }
- */
+*/

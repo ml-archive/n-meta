@@ -12,7 +12,7 @@ public struct Version {
         var numbers    = components.compactMap({ Int($0) })
         
         guard !numbers.isEmpty else {
-            throw NMetaError.versionNumberMissing
+            throw NMetaError.versionIsIncorrectFormat
         }
         
         major = numbers.removeFirst()

@@ -24,6 +24,10 @@ public struct NMeta: Service {
     public let device: String
     
     public init(raw: String) throws {
+        if raw.isEmpty {
+            throw NMetaError.headerIsEmpty
+        }
+        
         var components = raw.components(separatedBy: RawMetaConfig.delimiter)
         
         // Platform.
@@ -52,7 +56,7 @@ public struct NMeta: Service {
         let version = components.removeFirst()
         
         // Device OS.
-        try NMeta.assertItemsLeft(components, error: NMetaError.deviceOSMissing)
+        try NMeta.assertItemsLeft(components, error: NMetaError.deviceOsMissing)
         let deviceOs = components.removeFirst()
         
         // Device.

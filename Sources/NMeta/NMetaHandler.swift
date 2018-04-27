@@ -19,13 +19,6 @@ internal struct NMetaHandler {
     }
     
     internal func isMetaRequired(request: Request) throws -> Bool {
-         // TODO, look into this, should not be here?
-        // Only APIs
-        /*
-        if request.http.accept.pr {
-            return false
-        }
-        */
         
         // Check required environments
         if !requiredEnvironments.contains(environment.name) {
