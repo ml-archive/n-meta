@@ -1,6 +1,8 @@
-/// Config options for a `NMetaConfiguration`
-public struct NMetaConfiguration {
-    
+import Foundation
+import Vapor
+
+/// Config options for a `NMetaConfig`
+public struct NMetaConfig: ServiceType {
     // The request header, which is meta data will be exctracted from
     public let header: String
     
@@ -16,7 +18,7 @@ public struct NMetaConfiguration {
     /// Only check header on following environments
     public let requiredEnvironments: [String]
     
-    /// Creates a new `NMetaConfiguration`.
+    /// Creates a new `NMetaConfig`.
     public init(
         header: String = "N-Meta",
         platforms: [String] = ["web", "android", "ios"],
@@ -29,5 +31,10 @@ public struct NMetaConfiguration {
         self.environments = environments
         self.exceptPaths = exceptPaths
         self.requiredEnvironments = requiredEnvironments
+    }
+    
+    // Create default `NMetaConfig`.
+    public static func makeService(for worker: Container) throws -> NMetaConfig {
+        return self.init()
     }
 }
