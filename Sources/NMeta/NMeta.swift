@@ -1,7 +1,7 @@
 import Foundation
 import Vapor
 
-public class NMetaContainerService: Service {
+public class NMetaCache: Service {
 
     public init() {}
     

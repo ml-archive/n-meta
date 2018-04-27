@@ -15,7 +15,7 @@ extension NMetaProvider: Provider {
     public func register(_ services: inout Services) {
         services.register(config)
         services.register { _ in
-            return NMetaContainerService()
+            return NMetaCache()
         }
     }
     

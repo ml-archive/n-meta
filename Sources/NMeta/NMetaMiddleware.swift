@@ -18,7 +18,7 @@ public final class NMetaMiddleware: Middleware, Service {
             }
             
             // Extract and add meta to request.
-            try request.make(NMetaContainerService.self).nMeta = try nMetaHandler.metaOrFail(request: request)
+            try request.make(NMetaCache.self).nMeta = try nMetaHandler.metaOrFail(request: request)
             
             return res
         }
