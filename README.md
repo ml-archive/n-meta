@@ -1,6 +1,6 @@
-# Meta
-[![Swift Version](https://img.shields.io/badge/Swift-4-brightgreen.svg)](http://swift.org)
-[![Vapor Version](https://img.shields.io/badge/Vapor-3-F6CBCA.svg)](http://vapor.codes)
+# N-Meta Ⓜ️
+[![Swift Version](https://img.shields.io/badge/Swift-4.1-brightgreen.svg)](http://swift.org)
+[![Vapor Version](https://img.shields.io/badge/Vapor-3-30B6FC.svg)](http://vapor.codes)
 [![Circle CI](https://circleci.com/gh/nodes-vapor/meta/tree/master.svg?style=shield)](https://circleci.com/gh/nodes-vapor/meta)
 [![codebeat badge](https://codebeat.co/badges/69e8f2c3-2acb-417d-93a9-c82d5920d82b)](https://codebeat.co/projects/github-com-nodes-vapor-meta-master)
 [![codecov](https://codecov.io/gh/nodes-vapor/meta/branch/master/graph/badge.svg)](https://codecov.io/gh/nodes-vapor/meta)
