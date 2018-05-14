@@ -1,11 +1,11 @@
 # N-Meta Ⓜ️
 [![Swift Version](https://img.shields.io/badge/Swift-4.1-brightgreen.svg)](http://swift.org)
 [![Vapor Version](https://img.shields.io/badge/Vapor-3-30B6FC.svg)](http://vapor.codes)
-[![Circle CI](https://circleci.com/gh/nodes-vapor/meta/tree/master.svg?style=shield)](https://circleci.com/gh/nodes-vapor/meta)
-[![codebeat badge](https://codebeat.co/badges/69e8f2c3-2acb-417d-93a9-c82d5920d82b)](https://codebeat.co/projects/github-com-nodes-vapor-meta-master)
-[![codecov](https://codecov.io/gh/nodes-vapor/meta/branch/master/graph/badge.svg)](https://codecov.io/gh/nodes-vapor/meta)
-[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-vapor/meta)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-vapor/meta)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nodes-vapor/meta/master/LICENSE)
+[![Circle CI](https://circleci.com/gh/nodes-vapor/n-meta/tree/master.svg?style=shield)](https://circleci.com/gh/nodes-vapor/n-meta)
+[![codebeat badge](https://codebeat.co/badges/5dfa4439-cd97-4210-8595-40b57830196a)](https://codebeat.co/projects/github-com-nodes-vapor-n-meta-master)
+[![codecov](https://codecov.io/gh/nodes-vapor/n-meta/branch/master/graph/badge.svg)](https://codecov.io/gh/nodes-vapor/n-meta)
+[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-vapor/n-meta)](http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-vapor/n-meta)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nodes-vapor/n-meta/master/LICENSE)
 
 
 This package enforces clients to send a specific header in all requests:
@@ -14,11 +14,10 @@ This package enforces clients to send a specific header in all requests:
 NMeta: [PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
 ```
 
-For earlier support
+If you're running an older version of Vapor then have a look here:
 
-[Vapor 1.x](https://github.com/nodes-vapor/n-meta/tree/vapor-1)
-
-[Vapor 2.x](https://github.com/nodes-vapor/n-meta/tree/vapor-2)
+- [Vapor 1.x](https://github.com/nodes-vapor/n-meta/tree/vapor-1)
+- [Vapor 2.x](https://github.com/nodes-vapor/n-meta/tree/vapor-2)
 
 
 This header can look like this `android;production;1.2.3;4.4;Samsung S7`
