@@ -42,20 +42,21 @@ Update your `Package.swift` file.
 .package(url: "https://github.com/nodes-vapor/n-meta.git", from: "3.0.0-beta")
 ```
 
-Register in `configure.swift`:
-
-```
-services.register(NMetaConfig.self)
-```
-
-
 ## Getting started 🚀
 
+Register the provider in `configure.swift`:
+
 ```swift
-import class NMeta.Middleware
+import NMeta
 ```
 
-Add middleware directly to your routes:
+```
+try services.register(NMetaProvider())
+```
+
+You can supply your own `NMetaConfig` to the provider if needed.
+
+Next, add the middleware directly to your routes:
 
 ```swift
 router.grouped(NMetaMiddleware()).get("hello") { req in
