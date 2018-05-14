@@ -2,7 +2,10 @@ import Async
 import HTTP
 import Vapor
 
-public final class NMetaMiddleware: Middleware, Service {
+public final class NMetaMiddleware: Middleware, ServiceType {
+    public static func makeService(for container: Container) throws -> NMetaMiddleware {
+        return .init()
+    }
 
     public init() {}
 
