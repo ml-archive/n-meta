@@ -39,10 +39,10 @@ Why not just use `User-Agent`?
 
 Update your `Package.swift` file.
 ```swift
-.Package(url: "https://github.com/nodes-vapor/meta", majorVersion: 3)
+.package(url: "https://github.com/nodes-vapor/n-meta.git", from: "3.0.0-beta")
 ```
 
-Register in configure.swift:
+Register in `configure.swift`:
 
 ```
 services.register(NMetaConfig.self)
@@ -58,10 +58,8 @@ import class NMeta.Middleware
 Add middleware directly to your routes:
 
 ```swift
-    router.grouped(NMetaMiddleware()).get("hello") { req in
-        return "Hello, world!"
-    }
-    // ...
+router.grouped(NMetaMiddleware()).get("hello") { req in
+    return "Hello, world!"
 }
 ```
 
