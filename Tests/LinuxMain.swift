@@ -1,6 +1,6 @@
 import XCTest
-@testable import MetaTests
+@testable import NMetaTests
 
 XCTMain([
-     testCase(MetaTests.allTests),
+    testCase(NMetaTests.allTests),
 ])

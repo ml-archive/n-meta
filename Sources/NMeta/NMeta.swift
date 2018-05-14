@@ -1,7 +1,12 @@
-import Vapor
 import Foundation
+import Vapor
 
-public struct Meta {
+public class NMetaCache: Service {
+    internal var nMeta: NMeta?
+    public init() {}
+}
+
+public struct NMeta: Service {
     private enum RawMetaConfig {
         static let delimiter = ";"
         static let webPlatform = "web"
@@ -17,14 +22,18 @@ public struct Meta {
     public let device: String
 
     public init(raw: String) throws {
+        if raw.isEmpty {
+            throw NMetaError.headerIsEmpty
+        }
+
         var components = raw.components(separatedBy: RawMetaConfig.delimiter)
 
         // Platform.
-        try Meta.assertItemsLeft(components, errorMessage: "Platform missing.")
+        try NMeta.assertItemsLeft(components, error: NMetaError.platformMissing)
         let platform = components.removeFirst()
 
         // Environment.
-        try Meta.assertItemsLeft(components, errorMessage: "Environment missing.")
+        try NMeta.assertItemsLeft(components, error: NMetaError.environmentMissing)
         let environment = components.removeFirst()
 
         // Since web is normally using a valid User-Agent there is no reason
@@ -41,15 +50,15 @@ public struct Meta {
         }
 
         // Version.
-        try Meta.assertItemsLeft(components, errorMessage: "Version missing.")
+        try NMeta.assertItemsLeft(components, error: NMetaError.versionMissing)
         let version = components.removeFirst()
 
         // Device OS.
-        try Meta.assertItemsLeft(components, errorMessage: "Device OS missing.")
+        try NMeta.assertItemsLeft(components, error: NMetaError.deviceOsMissing)
         let deviceOs = components.removeFirst()
 
         // Device.
-        try Meta.assertItemsLeft(components, errorMessage: "Device missing.")
+        try NMeta.assertItemsLeft(components, error: NMetaError.deviceMissing)
         let device = components.removeFirst()
 
         try self.init(
@@ -68,53 +77,18 @@ public struct Meta {
         deviceOs: String,
         device: String
     ) throws {
-        // Set platform
         self.platform = platform
-
-        // Set environment
         self.environment = environment
-
-        // Set version
         self.version = try Version(string: version)
-
-        // Set device os
         self.deviceOs = deviceOs
-
-        // Set device
         self.device = device
     }
 
-
     // MARK: Helper functions.
 
-    private static func assertItemsLeft(_ items: [String], errorMessage: String) throws {
+    private static func assertItemsLeft(_ items: [String], error: NMetaError) throws {
         guard !items.isEmpty else {
-            throw Abort(
-                .badRequest,
-                reason: errorMessage
-            )
+            throw error
         }
-    }
-}
-
-// MARK: - NodeConvertible -
-
-extension Meta: NodeConvertible {
-    public init(node: Node) throws {
-        platform    = try node.get("platform")
-        environment = try node.get("environment")
-        version     = try node.get("version")
-        deviceOs    = try node.get("deviceOs")
-        device      = try node.get("device")
-    }
-
-    public func makeNode(in context: Context?) throws -> Node {
-        return try Node(node: [
-            "platform": Node(platform),
-            "environment": Node(environment),
-            "version": Node(node: version),
-            "deviceOs": Node(deviceOs),
-            "device": Node(device)
-        ])
     }
 }
