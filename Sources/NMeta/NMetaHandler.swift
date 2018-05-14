@@ -38,7 +38,7 @@ internal struct NMetaHandler {
             }
             
             // Check except paths and subfolders
-            if check.stringValue.last == "*" && request.http.urlString.hasPrefix(String(check.stringValue.dropLast())) {
+            if check.last == "*" && request.http.urlString.hasPrefix(String(check.dropLast())) {
                 return false
             }
         }
