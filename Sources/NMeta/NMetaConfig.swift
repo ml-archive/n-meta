@@ -5,19 +5,19 @@ import Vapor
 public struct NMetaConfig: ServiceType {
     // The request header, which is meta data will be exctracted from
     public let headerKey: String
-    
+
     // The supported platforms
     public let platforms: [String]
-    
+
     // The supported environments
     public let environments: [String]
-    
+
     // Ignore requirement on following paths
     public let exceptPaths: [String]
-    
+
     /// Only check header on following environments
     public let requiredEnvironments: [String]
-    
+
     /// Creates a new `NMetaConfig`.
     public init(
         headerKey: String = "N-Meta",
@@ -32,7 +32,7 @@ public struct NMetaConfig: ServiceType {
         self.exceptPaths = exceptPaths
         self.requiredEnvironments = requiredEnvironments
     }
-    
+
     // Create default `NMetaConfig`.
     public static func makeService(for worker: Container) throws -> NMetaConfig {
         return self.init()

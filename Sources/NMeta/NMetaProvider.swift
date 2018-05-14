@@ -2,9 +2,8 @@ import Service
 import Vapor
 
 public final class NMetaProvider {
-
     public let config: NMetaConfig
-    
+
     public init(config: NMetaConfig) {
         self.config = config
     }
@@ -18,7 +17,7 @@ extension NMetaProvider: Provider {
             return NMetaCache()
         }
     }
-    
+
     public func didBoot(_ container: Container) -> EventLoopFuture<Void> {
         return .done(on: container)
     }

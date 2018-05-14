@@ -3,7 +3,6 @@ import XCTest
 
 class NMetaTests: XCTestCase {
     func testVersionFull() throws {
-        
         let version = try Version(string: "1.2.3")
         
         XCTAssertEqual(version.major, 1)
@@ -12,7 +11,6 @@ class NMetaTests: XCTestCase {
     }
     
     func testVersionMinor() throws {
-        
         let version = try Version(string: "1")
         
         XCTAssertEqual(version.major, 1)
@@ -21,7 +19,6 @@ class NMetaTests: XCTestCase {
     }
 
     func testVersionPatch() throws {
-        
         let version = try Version(string: "1.2")
         
         XCTAssertEqual(version.major, 1)
@@ -30,7 +27,6 @@ class NMetaTests: XCTestCase {
     }
     
     func testNMetaSuccess() throws {
-        
         let nMeta = try NMeta(raw: "android;production;1.2.3;4.4;Samsung S7")
         
         XCTAssertEqual(nMeta.platform, "android")
