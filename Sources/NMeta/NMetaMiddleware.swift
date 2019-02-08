@@ -14,7 +14,7 @@ public final class NMetaMiddleware: Middleware, ServiceType {
         to request: Request,
         chainingTo next: Responder
     ) throws -> Future<Response> {
-        return try next.respond(to: request).map(to: Response.self) { res in
+        return try next.respond(to: request).map { res in
 
             let config = try request.make(NMetaConfig.self)
             let nMetaHandler = try NMetaHandler(config)

@@ -19,7 +19,7 @@ extension NMetaProvider: Provider {
         }
     }
 
-    public func didBoot(_ container: Container) -> EventLoopFuture<Void> {
+    public func didBoot(_ container: Container) -> Future<Void> {
         return .done(on: container)
     }
 }
