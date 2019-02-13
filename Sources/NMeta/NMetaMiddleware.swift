@@ -19,6 +19,7 @@ public final class NMetaMiddleware: Middleware, ServiceType {
         let nMetaHandler = try NMetaHandler(config)
 
         if try nMetaHandler.isMetaRequired(request: request) {
+            // Extract and add meta to request.
             try request.make(NMetaCache.self).nMeta = try nMetaHandler.metaOrFail(request: request)
         }
         return try next.respond(to: request)

@@ -25,7 +25,7 @@ internal struct NMetaHandler {
         }
 
         // Bypass CORS requests
-        if request.http.method == HTTPMethod.OPTIONS {
+        if request.http.method == .OPTIONS {
             return false
         }
 
