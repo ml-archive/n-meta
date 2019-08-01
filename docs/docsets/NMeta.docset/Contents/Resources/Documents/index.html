@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NMeta  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="NMeta  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NMeta Docs</a> (23% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NMeta Reference</a>
+        <img id="carat" src="img/carat.png" />
+        NMeta  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NMetaCache.html">NMetaCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NMetaMiddleware.html">NMetaMiddleware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NMetaProvider.html">NMetaProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NMetaError.html">NMetaError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Request.html">Request</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/NMeta.html">NMeta</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/NMetaConfig.html">NMetaConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='n-meta' class='heading'>N-Meta Ⓜ️</h1>
+
+<p><a href="http://swift.org"><img src="https://img.shields.io/badge/Swift-4.1-brightgreen.svg" alt="Swift Version"></a>
+<a href="http://vapor.codes"><img src="https://img.shields.io/badge/Vapor-3-30B6FC.svg" alt="Vapor Version"></a>
+<a href="https://circleci.com/gh/nodes-vapor/n-meta"><img src="https://circleci.com/gh/nodes-vapor/n-meta/tree/master.svg?style=shield" alt="Circle CI"></a>
+<a href="https://codebeat.co/projects/github-com-nodes-vapor-n-meta-master"><img src="https://codebeat.co/badges/5dfa4439-cd97-4210-8595-40b57830196a" alt="codebeat badge"></a>
+<a href="https://codecov.io/gh/nodes-vapor/n-meta"><img src="https://codecov.io/gh/nodes-vapor/n-meta/branch/master/graph/badge.svg" alt="codecov"></a>
+<a href="http://clayallsopp.github.io/readme-score?url=https://github.com/nodes-vapor/n-meta"><img src="http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/nodes-vapor/n-meta" alt="Readme Score"></a>
+<a href="https://raw.githubusercontent.com/nodes-vapor/n-meta/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a></p>
+
+<p>This package enforces clients to send a specific header in all requests:</p>
+<pre class="highlight plaintext"><code>NMeta: [PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
+</code></pre>
+
+<p>If you&rsquo;re running an older version of Vapor then have a look here:</p>
+
+<ul>
+<li><a href="https://github.com/nodes-vapor/n-meta/tree/vapor-1">Vapor 1.x</a></li>
+<li><a href="https://github.com/nodes-vapor/n-meta/tree/vapor-2">Vapor 2.x</a></li>
+</ul>
+
+<p>This header can look like this <code>android;production;1.2.3;4.4;Samsung S7</code></p>
+
+<ul>
+<li>platform</li>
+<li>environment</li>
+<li>app version</li>
+<li>device os</li>
+<li>device</li>
+</ul>
+
+<p>For web platform only platform and environment is required, since the rest can be found in <code>User-Agent</code>.</p>
+
+<p>Why not just use <code>User-Agent</code>?</p>
+
+<ul>
+<li><code>User-Agent</code> is missing some of these details</li>
+<li><code>User-Agent</code> can be hard to extend/override</li>
+<li>Default <code>User-Agent</code> in iOS &amp; Android can be their client (OkHttp, Alamofire etc).</li>
+</ul>
+<h2 id='installation' class='heading'>📦 Installation</h2>
+
+<p>Update your <code>Package.swift</code> file.</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/nodes-vapor/n-meta.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"3.0.0-beta"</span><span class="p">)</span>
+</code></pre>
+<h2 id='getting-started' class='heading'>Getting started 🚀</h2>
+
+<p>Register the provider in <code>configure.swift</code>:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">NMeta</span>
+</code></pre>
+<pre class="highlight plaintext"><code>try services.register(NMetaProvider())
+</code></pre>
+
+<p>You can supply your own <code><a href="Structs/NMetaConfig.html">NMetaConfig</a></code> to the provider if needed.</p>
+
+<p>Next, add the middleware directly to your routes:</p>
+<pre class="highlight swift"><code><span class="n">router</span><span class="o">.</span><span class="nf">grouped</span><span class="p">(</span><span class="kt">NMetaMiddleware</span><span class="p">())</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span> <span class="p">{</span> <span class="n">req</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="s">"Hello, world!"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>or add the middleware globally (e.g. in <code>configure.swift</code>) which will add it to all routes:</p>
+<pre class="highlight swift"><code><span class="n">middlewares</span><span class="o">.</span><span class="nf">use</span><span class="p">(</span><span class="kt">NMetaMiddleware</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+<h2 id='credits' class='heading'>🏆 Credits</h2>
+
+<p>This package is developed and maintained by the Vapor team at <a href="https://www.nodesagency.com">Nodes</a>.
+The package owner for this project is <a href="https://github.com/steffendsommer">Steffen</a>.</p>
+<h2 id='license' class='heading'>📄 License</h2>
+
+<p>This package is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-08-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,2423 @@
+[{
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 2712,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public class NMetaCache : <Type usr=\"s:7ServiceAAP\">Service<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 32
+          }
+        ],
+        "key.bodylength" : 53,
+        "key.bodyoffset" : 66,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 7,
+            "key.offset" : 57
+          }
+        ],
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>NMetaCache<\/decl.name> : <ref.protocol usr=\"s:7ServiceAAP\">Service<\/ref.protocol><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Service"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 81,
+        "key.name" : "NMetaCache",
+        "key.namelength" : 10,
+        "key.nameoffset" : 45,
+        "key.offset" : 39,
+        "key.parsed_declaration" : "public class NMetaCache: Service",
+        "key.parsed_scope.end" : 7,
+        "key.parsed_scope.start" : 4,
+        "key.runtime_name" : "_TtC4main10NMetaCache",
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>internal var nMeta: <Type usr=\"s:5NMetaAAV\">NMeta<\/Type>?<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.internal",
+                "key.length" : 8,
+                "key.offset" : 71
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>internal<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>nMeta<\/decl.name>: <decl.var.type><ref.struct usr=\"s:5NMetaAAV\">NMeta<\/ref.struct>?<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 17,
+            "key.name" : "nMeta",
+            "key.namelength" : 5,
+            "key.nameoffset" : 84,
+            "key.offset" : 80,
+            "key.parsed_declaration" : "internal var nMeta: NMeta?",
+            "key.parsed_scope.end" : 5,
+            "key.parsed_scope.start" : 5,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.typename" : "NMeta?",
+            "key.typeusr" : "$s5NMetaAAVSgD",
+            "key.usr" : "s:5NMeta0A5CacheC5nMetaA2AVSgvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init()<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 102
+              }
+            ],
+            "key.bodylength" : 0,
+            "key.bodyoffset" : 117,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>()<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 9,
+            "key.name" : "init()",
+            "key.namelength" : 6,
+            "key.nameoffset" : 109,
+            "key.offset" : 109,
+            "key.parsed_declaration" : "public init()",
+            "key.parsed_scope.end" : 6,
+            "key.parsed_scope.start" : 6,
+            "key.typename" : "(NMetaCache.Type) -> () -> NMetaCache",
+            "key.typeusr" : "$s5NMeta0A5CacheCycD",
+            "key.usr" : "s:5NMeta0A5CacheCACycfc"
+          }
+        ],
+        "key.typename" : "NMetaCache.Type",
+        "key.typeusr" : "$s5NMeta0A5CacheCmD",
+        "key.usr" : "s:5NMeta0A5CacheC"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct NMeta : <Type usr=\"s:7ServiceAAP\">Service<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 122
+          }
+        ],
+        "key.bodylength" : 2558,
+        "key.bodyoffset" : 152,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 7,
+            "key.offset" : 143
+          }
+        ],
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>NMeta<\/decl.name> : <ref.protocol usr=\"s:7ServiceAAP\">Service<\/ref.protocol><\/decl.struct>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Service"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 2582,
+        "key.name" : "NMeta",
+        "key.namelength" : 5,
+        "key.nameoffset" : 136,
+        "key.offset" : 129,
+        "key.parsed_declaration" : "public struct NMeta: Service",
+        "key.parsed_scope.end" : 94,
+        "key.parsed_scope.start" : 9,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private enum <Type usr=\"s:5NMetaAAV\">NMeta<\/Type>.RawMetaConfig<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 157
+              }
+            ],
+            "key.bodylength" : 195,
+            "key.bodyoffset" : 185,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <ref.struct usr=\"s:5NMetaAAV\">NMeta<\/ref.struct>.<decl.name>RawMetaConfig<\/decl.name><\/decl.enum>",
+            "key.kind" : "source.lang.swift.decl.enum",
+            "key.length" : 216,
+            "key.name" : "RawMetaConfig",
+            "key.namelength" : 13,
+            "key.nameoffset" : 170,
+            "key.offset" : 165,
+            "key.parsed_declaration" : "private enum RawMetaConfig",
+            "key.parsed_scope.end" : 16,
+            "key.parsed_scope.start" : 10,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.internal",
+                "key.annotated_decl" : "<Declaration>static let delimiter: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>delimiter<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.static>",
+                "key.kind" : "source.lang.swift.decl.var.static",
+                "key.length" : 26,
+                "key.name" : "delimiter",
+                "key.namelength" : 9,
+                "key.nameoffset" : 205,
+                "key.offset" : 194,
+                "key.parsed_declaration" : "static let delimiter = \";\"",
+                "key.parsed_scope.end" : 11,
+                "key.parsed_scope.start" : 11,
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV13RawMetaConfig33_FBACC6D9FB33943BA7FFA060A8C02668LLO9delimiterSSvpZ"
+              },
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.internal",
+                "key.annotated_decl" : "<Declaration>static let webPlatform: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>webPlatform<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.static>",
+                "key.kind" : "source.lang.swift.decl.var.static",
+                "key.length" : 30,
+                "key.name" : "webPlatform",
+                "key.namelength" : 11,
+                "key.nameoffset" : 240,
+                "key.offset" : 229,
+                "key.parsed_declaration" : "static let webPlatform = \"web\"",
+                "key.parsed_scope.end" : 12,
+                "key.parsed_scope.start" : 12,
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV13RawMetaConfig33_FBACC6D9FB33943BA7FFA060A8C02668LLO11webPlatformSSvpZ"
+              },
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.internal",
+                "key.annotated_decl" : "<Declaration>static let webVersion: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>webVersion<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.static>",
+                "key.kind" : "source.lang.swift.decl.var.static",
+                "key.length" : 31,
+                "key.name" : "webVersion",
+                "key.namelength" : 10,
+                "key.nameoffset" : 279,
+                "key.offset" : 268,
+                "key.parsed_declaration" : "static let webVersion = \"0.0.0\"",
+                "key.parsed_scope.end" : 13,
+                "key.parsed_scope.start" : 13,
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV13RawMetaConfig33_FBACC6D9FB33943BA7FFA060A8C02668LLO10webVersionSSvpZ"
+              },
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.internal",
+                "key.annotated_decl" : "<Declaration>static let webDeviceOs: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>webDeviceOs<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.static>",
+                "key.kind" : "source.lang.swift.decl.var.static",
+                "key.length" : 30,
+                "key.name" : "webDeviceOs",
+                "key.namelength" : 11,
+                "key.nameoffset" : 319,
+                "key.offset" : 308,
+                "key.parsed_declaration" : "static let webDeviceOs = \"N\/A\"",
+                "key.parsed_scope.end" : 14,
+                "key.parsed_scope.start" : 14,
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV13RawMetaConfig33_FBACC6D9FB33943BA7FFA060A8C02668LLO11webDeviceOsSSvpZ"
+              },
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.internal",
+                "key.annotated_decl" : "<Declaration>static let webDevice: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>webDevice<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.static>",
+                "key.kind" : "source.lang.swift.decl.var.static",
+                "key.length" : 28,
+                "key.name" : "webDevice",
+                "key.namelength" : 9,
+                "key.nameoffset" : 358,
+                "key.offset" : 347,
+                "key.parsed_declaration" : "static let webDevice = \"N\/A\"",
+                "key.parsed_scope.end" : 15,
+                "key.parsed_scope.start" : 15,
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV13RawMetaConfig33_FBACC6D9FB33943BA7FFA060A8C02668LLO9webDeviceSSvpZ"
+              }
+            ],
+            "key.typename" : "NMeta.RawMetaConfig.Type",
+            "key.typeusr" : "$s5NMetaAAV13RawMetaConfig33_FBACC6D9FB33943BA7FFA060A8C02668LLOmD",
+            "key.usr" : "s:5NMetaAAV13RawMetaConfig33_FBACC6D9FB33943BA7FFA060A8C02668LLO"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let platform: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 387
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>platform<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 20,
+            "key.name" : "platform",
+            "key.namelength" : 8,
+            "key.nameoffset" : 398,
+            "key.offset" : 394,
+            "key.parsed_declaration" : "public let platform: String",
+            "key.parsed_scope.end" : 18,
+            "key.parsed_scope.start" : 18,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5NMetaAAV8platformSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let environment: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 419
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>environment<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.name" : "environment",
+            "key.namelength" : 11,
+            "key.nameoffset" : 430,
+            "key.offset" : 426,
+            "key.parsed_declaration" : "public let environment: String",
+            "key.parsed_scope.end" : 19,
+            "key.parsed_scope.start" : 19,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5NMetaAAV11environmentSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let version: <Type usr=\"s:5NMeta7VersionV\">Version<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 454
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>version<\/decl.name>: <decl.var.type><ref.struct usr=\"s:5NMeta7VersionV\">Version<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 20,
+            "key.name" : "version",
+            "key.namelength" : 7,
+            "key.nameoffset" : 465,
+            "key.offset" : 461,
+            "key.parsed_declaration" : "public let version: Version",
+            "key.parsed_scope.end" : 20,
+            "key.parsed_scope.start" : 20,
+            "key.typename" : "Version",
+            "key.typeusr" : "$s5NMeta7VersionVD",
+            "key.usr" : "s:5NMetaAAV7versionAA7VersionVvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let deviceOs: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 486
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>deviceOs<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 20,
+            "key.name" : "deviceOs",
+            "key.namelength" : 8,
+            "key.nameoffset" : 497,
+            "key.offset" : 493,
+            "key.parsed_declaration" : "public let deviceOs: String",
+            "key.parsed_scope.end" : 21,
+            "key.parsed_scope.start" : 21,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5NMetaAAV8deviceOsSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let device: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 518
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>device<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 18,
+            "key.name" : "device",
+            "key.namelength" : 6,
+            "key.nameoffset" : 529,
+            "key.offset" : 525,
+            "key.parsed_declaration" : "public let device: String",
+            "key.parsed_scope.end" : 22,
+            "key.parsed_scope.start" : 22,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5NMetaAAV6deviceSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(raw: <Type usr=\"s:SS\">String<\/Type>) throws<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 549
+              }
+            ],
+            "key.bodylength" : 1576,
+            "key.bodyoffset" : 582,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>raw<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 1603,
+            "key.name" : "init(raw:)",
+            "key.namelength" : 17,
+            "key.nameoffset" : 556,
+            "key.offset" : 556,
+            "key.parsed_declaration" : "public init(raw: String) throws",
+            "key.parsed_scope.end" : 71,
+            "key.parsed_scope.start" : 24,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:5NMetaAAV8platform11environment7version8deviceOs0E0ABSS_S4StKcfc\">init(platform:environment:version:deviceOs:device:)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>var components: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>components<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 69,
+                "key.name" : "components",
+                "key.namelength" : 10,
+                "key.nameoffset" : 674,
+                "key.offset" : 670,
+                "key.parsed_declaration" : "var components = raw.components(separatedBy: RawMetaConfig.delimiter)",
+                "key.parsed_scope.end" : 29,
+                "key.parsed_scope.start" : 29,
+                "key.typename" : "[String]",
+                "key.typeusr" : "$sSaySSGD",
+                "key.usr" : "s:5NMetaAAV3rawABSS_tKcfc10componentsL_SaySSGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let platform: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>platform<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 39,
+                "key.name" : "platform",
+                "key.namelength" : 8,
+                "key.nameoffset" : 855,
+                "key.offset" : 851,
+                "key.parsed_declaration" : "let platform = components.removeFirst()",
+                "key.parsed_scope.end" : 33,
+                "key.parsed_scope.start" : 33,
+                "key.related_decls" : [
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:5NMetaAAV8platformSSvp\">platform<\/RelatedName>"
+                  }
+                ],
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV3rawABSS_tKcfc8platformL_SSvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let environment: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>environment<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 42,
+                "key.name" : "environment",
+                "key.namelength" : 11,
+                "key.nameoffset" : 1012,
+                "key.offset" : 1008,
+                "key.parsed_declaration" : "let environment = components.removeFirst()",
+                "key.parsed_scope.end" : 37,
+                "key.parsed_scope.start" : 37,
+                "key.related_decls" : [
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:5NMetaAAV11environmentSSvp\">environment<\/RelatedName>"
+                  }
+                ],
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV3rawABSS_tKcfc11environmentL_SSvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let version: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>version<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 38,
+                "key.name" : "version",
+                "key.namelength" : 7,
+                "key.nameoffset" : 1629,
+                "key.offset" : 1625,
+                "key.parsed_declaration" : "let version = components.removeFirst()",
+                "key.parsed_scope.end" : 54,
+                "key.parsed_scope.start" : 54,
+                "key.related_decls" : [
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:5NMetaAAV7versionAA7VersionVvp\">version<\/RelatedName>"
+                  }
+                ],
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV3rawABSS_tKcfc7versionL_SSvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let deviceOs: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>deviceOs<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 39,
+                "key.name" : "deviceOs",
+                "key.namelength" : 8,
+                "key.nameoffset" : 1780,
+                "key.offset" : 1776,
+                "key.parsed_declaration" : "let deviceOs = components.removeFirst()",
+                "key.parsed_scope.end" : 58,
+                "key.parsed_scope.start" : 58,
+                "key.related_decls" : [
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:5NMetaAAV8deviceOsSSvp\">deviceOs<\/RelatedName>"
+                  }
+                ],
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV3rawABSS_tKcfc8deviceOsL_SSvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let device: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>device<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 37,
+                "key.name" : "device",
+                "key.namelength" : 6,
+                "key.nameoffset" : 1927,
+                "key.offset" : 1923,
+                "key.parsed_declaration" : "let device = components.removeFirst()",
+                "key.parsed_scope.end" : 62,
+                "key.parsed_scope.start" : 62,
+                "key.related_decls" : [
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:5NMetaAAV6deviceSSvp\">device<\/RelatedName>"
+                  }
+                ],
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:5NMetaAAV3rawABSS_tKcfc6deviceL_SSvp"
+              }
+            ],
+            "key.typename" : "(NMeta.Type) -> (String) throws -> NMeta",
+            "key.typeusr" : "$s3raw5NMetaABVSS_tKcD",
+            "key.usr" : "s:5NMetaAAV3rawABSS_tKcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(platform: <Type usr=\"s:SS\">String<\/Type>, environment: <Type usr=\"s:SS\">String<\/Type>, version: <Type usr=\"s:SS\">String<\/Type>, deviceOs: <Type usr=\"s:SS\">String<\/Type>, device: <Type usr=\"s:SS\">String<\/Type>) throws<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 2165
+              }
+            ],
+            "key.bodylength" : 191,
+            "key.bodyoffset" : 2321,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>platform<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>version<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>deviceOs<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>device<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 341,
+            "key.name" : "init(platform:environment:version:deviceOs:device:)",
+            "key.namelength" : 140,
+            "key.nameoffset" : 2172,
+            "key.offset" : 2172,
+            "key.parsed_declaration" : "public init(\n    platform: String,\n    environment: String,\n    version: String,\n    deviceOs: String,\n    device: String\n) throws",
+            "key.parsed_scope.end" : 85,
+            "key.parsed_scope.start" : 73,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:5NMetaAAV3rawABSS_tKcfc\">init(raw:)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMeta.Type) -> (String, String, String, String, String) throws -> NMeta",
+            "key.typeusr" : "$s8platform11environment7version8deviceOs0D05NMetaAFVSS_S4StKcD",
+            "key.usr" : "s:5NMetaAAV8platform11environment7version8deviceOs0E0ABSS_S4StKcfc"
+          },
+          {
+            "key.kind" : "source.lang.swift.syntaxtype.comment.mark",
+            "key.length" : 23,
+            "key.name" : "MARK: Helper functions.",
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 2522
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private static func assertItemsLeft(_ items: [<Type usr=\"s:SS\">String<\/Type>], error: <Type usr=\"s:5NMeta0A5ErrorO\">NMetaError<\/Type>) throws<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 2551
+              }
+            ],
+            "key.bodylength" : 75,
+            "key.bodyoffset" : 2633,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>assertItemsLeft<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>items<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>error<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:5NMeta0A5ErrorO\">NMetaError<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.method.static>",
+            "key.kind" : "source.lang.swift.decl.function.method.static",
+            "key.length" : 150,
+            "key.name" : "assertItemsLeft(_:error:)",
+            "key.namelength" : 53,
+            "key.nameoffset" : 2571,
+            "key.offset" : 2559,
+            "key.parsed_declaration" : "private static func assertItemsLeft(_ items: [String], error: NMetaError) throws",
+            "key.parsed_scope.end" : 93,
+            "key.parsed_scope.start" : 89,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMeta.Type) -> ([String], NMetaError) throws -> ()",
+            "key.typeusr" : "$s_5errorySaySSG_5NMeta0B5ErrorOtKcD",
+            "key.usr" : "s:5NMetaAAV15assertItemsLeft33_FBACC6D9FB33943BA7FFA060A8C02668LL_5errorySaySSG_AA0A5ErrorOtKFZ"
+          }
+        ],
+        "key.typename" : "NMeta.Type",
+        "key.typeusr" : "$s5NMetaAAVmD",
+        "key.usr" : "s:5NMetaAAV"
+      }
+    ]
+  }
+}, {
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 1331,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct NMetaConfig : <Type usr=\"s:7Service0A4TypeP\">ServiceType<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 71
+          }
+        ],
+        "key.bodylength" : 1218,
+        "key.bodyoffset" : 111,
+        "key.doc.column" : 15,
+        "key.doc.comment" : "Config options for a `NMetaConfig`",
+        "key.doc.declaration" : "public struct NMetaConfig : ServiceType",
+        "key.doc.file" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift\" line=\"5\" column=\"15\"><Name>NMetaConfig<\/Name><USR>s:5NMeta0A6ConfigV<\/USR><Declaration>public struct NMetaConfig : ServiceType<\/Declaration><CommentParts><Abstract><Para>Config options for a <codeVoice>NMetaConfig<\/codeVoice><\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 5,
+        "key.doc.name" : "NMetaConfig",
+        "key.doc.type" : "Class",
+        "key.doclength" : 39,
+        "key.docoffset" : 32,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 11,
+            "key.offset" : 98
+          }
+        ],
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>NMetaConfig<\/decl.name> : <ref.protocol usr=\"s:7Service0A4TypeP\">ServiceType<\/ref.protocol><\/decl.struct>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "ServiceType"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 1252,
+        "key.name" : "NMetaConfig",
+        "key.namelength" : 11,
+        "key.nameoffset" : 85,
+        "key.offset" : 78,
+        "key.parsed_declaration" : "public struct NMetaConfig: ServiceType",
+        "key.parsed_scope.end" : 40,
+        "key.parsed_scope.start" : 5,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let headerKey: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 186
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>headerKey<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 21,
+            "key.name" : "headerKey",
+            "key.namelength" : 9,
+            "key.nameoffset" : 197,
+            "key.offset" : 193,
+            "key.parsed_declaration" : "public let headerKey: String",
+            "key.parsed_scope.end" : 7,
+            "key.parsed_scope.start" : 7,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5NMeta0A6ConfigV9headerKeySSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let platforms: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 251
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>platforms<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.name" : "platforms",
+            "key.namelength" : 9,
+            "key.nameoffset" : 262,
+            "key.offset" : 258,
+            "key.parsed_declaration" : "public let platforms: [String]",
+            "key.parsed_scope.end" : 10,
+            "key.parsed_scope.start" : 10,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A6ConfigV9platformsSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let environments: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 321
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>environments<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 26,
+            "key.name" : "environments",
+            "key.namelength" : 12,
+            "key.nameoffset" : 332,
+            "key.offset" : 328,
+            "key.parsed_declaration" : "public let environments: [String]",
+            "key.parsed_scope.end" : 13,
+            "key.parsed_scope.start" : 13,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A6ConfigV12environmentsSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let exceptPaths: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 405
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>exceptPaths<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 25,
+            "key.name" : "exceptPaths",
+            "key.namelength" : 11,
+            "key.nameoffset" : 416,
+            "key.offset" : 412,
+            "key.parsed_declaration" : "public let exceptPaths: [String]",
+            "key.parsed_scope.end" : 16,
+            "key.parsed_scope.start" : 16,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A6ConfigV11exceptPathsSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let requiredEnvironments: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 495
+              }
+            ],
+            "key.doc.column" : 16,
+            "key.doc.comment" : "Only check header on following environments",
+            "key.doc.declaration" : "public let requiredEnvironments: [String]",
+            "key.doc.file" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift\" line=\"19\" column=\"16\"><Name>requiredEnvironments<\/Name><USR>s:5NMeta0A6ConfigV20requiredEnvironmentsSaySSGvp<\/USR><Declaration>public let requiredEnvironments: [String]<\/Declaration><CommentParts><Abstract><Para>Only check header on following environments<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 19,
+            "key.doc.name" : "requiredEnvironments",
+            "key.doc.type" : "Other",
+            "key.doclength" : 48,
+            "key.docoffset" : 443,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>requiredEnvironments<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 34,
+            "key.name" : "requiredEnvironments",
+            "key.namelength" : 20,
+            "key.nameoffset" : 506,
+            "key.offset" : 502,
+            "key.parsed_declaration" : "public let requiredEnvironments: [String]",
+            "key.parsed_scope.end" : 19,
+            "key.parsed_scope.start" : 19,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A6ConfigV20requiredEnvironmentsSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(headerKey: <Type usr=\"s:SS\">String<\/Type> = &quot;N-Meta&quot;, platforms: [<Type usr=\"s:SS\">String<\/Type>] = [&quot;web&quot;, &quot;android&quot;, &quot;ios&quot;], environments: [<Type usr=\"s:SS\">String<\/Type>] = [&quot;local&quot;, &quot;development&quot;, &quot;staging&quot;, &quot;production&quot;], exceptPaths: [<Type usr=\"s:SS\">String<\/Type>] = [ &quot;\/js\/*&quot;, &quot;\/css\/*&quot;, &quot;\/images\/*&quot;, &quot;\/favicons\/*&quot;, &quot;\/admin\/*&quot;], requiredEnvironments: [<Type usr=\"s:SS\">String<\/Type>] = [&quot;local&quot;, &quot;development&quot;, &quot;staging&quot;, &quot;production&quot;])<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 579
+              }
+            ],
+            "key.bodylength" : 212,
+            "key.bodyoffset" : 962,
+            "key.doc.column" : 12,
+            "key.doc.comment" : "Creates a new `NMetaConfig`.",
+            "key.doc.declaration" : "public init(headerKey: String = \"N-Meta\", platforms: [String] = [\"web\", \"android\", \"ios\"], environments: [String] = [\"local\", \"development\", \"staging\", \"production\"], exceptPaths: [String] = [ \"\/js\/*\", \"\/css\/*\", \"\/images\/*\", \"\/favicons\/*\", \"\/admin\/*\"], requiredEnvironments: [String] = [\"local\", \"development\", \"staging\", \"production\"])",
+            "key.doc.file" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift\" line=\"22\" column=\"12\"><Name>init(headerKey:platforms:environments:exceptPaths:requiredEnvironments:)<\/Name><USR>s:5NMeta0A6ConfigV9headerKey9platforms12environments11exceptPaths20requiredEnvironmentsACSS_SaySSGA3Itcfc<\/USR><Declaration>public init(headerKey: String = &quot;N-Meta&quot;, platforms: [String] = [&quot;web&quot;, &quot;android&quot;, &quot;ios&quot;], environments: [String] = [&quot;local&quot;, &quot;development&quot;, &quot;staging&quot;, &quot;production&quot;], exceptPaths: [String] = [ &quot;\/js\/*&quot;, &quot;\/css\/*&quot;, &quot;\/images\/*&quot;, &quot;\/favicons\/*&quot;, &quot;\/admin\/*&quot;], requiredEnvironments: [String] = [&quot;local&quot;, &quot;development&quot;, &quot;staging&quot;, &quot;production&quot;])<\/Declaration><CommentParts><Abstract><Para>Creates a new <codeVoice>NMetaConfig<\/codeVoice>.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 22,
+            "key.doc.name" : "init(headerKey:platforms:environments:exceptPaths:requiredEnvironments:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 33,
+            "key.docoffset" : 542,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>headerKey<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;N-Meta&quot;<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>platforms<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type> = [&quot;web&quot;, &quot;android&quot;, &quot;ios&quot;]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type> = [&quot;local&quot;, &quot;development&quot;, &quot;staging&quot;, &quot;production&quot;]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>exceptPaths<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type> = [ &quot;\/js\/*&quot;, &quot;\/css\/*&quot;, &quot;\/images\/*&quot;, &quot;\/favicons\/*&quot;, &quot;\/admin\/*&quot;]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>requiredEnvironments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type> = [&quot;local&quot;, &quot;development&quot;, &quot;staging&quot;, &quot;production&quot;]<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 589,
+            "key.name" : "init(headerKey:platforms:environments:exceptPaths:requiredEnvironments:)",
+            "key.namelength" : 370,
+            "key.nameoffset" : 586,
+            "key.offset" : 586,
+            "key.parsed_declaration" : "public init(\n    headerKey: String = \"N-Meta\",\n    platforms: [String] = [\"web\", \"android\", \"ios\"],\n    environments: [String] = [\"local\", \"development\", \"staging\", \"production\"],\n    exceptPaths: [String] = [ \"\/js\/*\", \"\/css\/*\", \"\/images\/*\", \"\/favicons\/*\", \"\/admin\/*\"],\n    requiredEnvironments: [String] = [\"local\", \"development\", \"staging\", \"production\"])",
+            "key.parsed_scope.end" : 34,
+            "key.parsed_scope.start" : 22,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaConfig.Type) -> (String, [String], [String], [String], [String]) -> NMetaConfig",
+            "key.typeusr" : "$s9headerKey9platforms12environments11exceptPaths20requiredEnvironments5NMeta0I6ConfigVSS_SaySSGA3ItcD",
+            "key.usr" : "s:5NMeta0A6ConfigV9headerKey9platforms12environments11exceptPaths20requiredEnvironmentsACSS_SaySSGA3Itcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public static func makeService(for worker: <Type usr=\"s:7Service9ContainerP\">Container<\/Type>) throws -&gt; <Type usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1218
+              }
+            ],
+            "key.bodylength" : 32,
+            "key.bodyoffset" : 1295,
+            "key.doc.declaration" : "static func makeService(for container: Container) throws -> Self",
+            "key.doc.discussion" : [
+              {
+                "Para" : "See `ServiceFactory` for more information."
+              }
+            ],
+            "key.doc.full_as_xml" : "<Function><Name>makeService(for:)<\/Name><USR>s:7Service0A4TypeP04makeA03forxAA9Container_p_tKFZ<\/USR><Declaration>static func makeService(for container: Container) throws -&gt; Self<\/Declaration><CommentParts><Abstract><Para>Creates a new instance of the service for the supplied <codeVoice>Container<\/codeVoice>.<\/Para><\/Abstract><Discussion><Para>See <codeVoice>ServiceFactory<\/codeVoice> for more information.<\/Para><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.name" : "makeService(for:)",
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaConfig.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>makeService<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>for<\/decl.var.parameter.argument_label> <decl.var.parameter.name>worker<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:7Service9ContainerP\">Container<\/ref.protocol><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.struct usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
+            "key.kind" : "source.lang.swift.decl.function.method.static",
+            "key.length" : 103,
+            "key.name" : "makeService(for:)",
+            "key.namelength" : 34,
+            "key.nameoffset" : 1237,
+            "key.offset" : 1225,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Service0A4TypeP04makeA03forxAA9Container_p_tKFZ"
+              }
+            ],
+            "key.parsed_declaration" : "public static func makeService(for worker: Container) throws -> NMetaConfig",
+            "key.parsed_scope.end" : 39,
+            "key.parsed_scope.start" : 37,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaConfig.Type) -> (Container) throws -> NMetaConfig",
+            "key.typeusr" : "$s3for5NMeta0B6ConfigV7Service9Container_p_tKcD",
+            "key.usr" : "s:7Service0A4TypeP04makeA03forxAA9Container_p_tKFZ"
+          }
+        ],
+        "key.typename" : "NMetaConfig.Type",
+        "key.typeusr" : "$s5NMeta0A6ConfigVmD",
+        "key.usr" : "s:5NMeta0A6ConfigV"
+      }
+    ]
+  }
+}, {
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 2059,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public enum NMetaError : <Type usr=\"s:SS\">String<\/Type>, <Type usr=\"s:s5ErrorP\">Error<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 14
+          }
+        ],
+        "key.bodylength" : 304,
+        "key.bodyoffset" : 53,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 6,
+            "key.offset" : 38
+          },
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 5,
+            "key.offset" : 46
+          }
+        ],
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+        "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <decl.name>NMetaError<\/decl.name> : <ref.struct usr=\"s:SS\">String<\/ref.struct>, <ref.protocol usr=\"s:s5ErrorP\">Error<\/ref.protocol><\/decl.enum>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "String"
+          },
+          {
+            "key.name" : "Error"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.enum",
+        "key.length" : 337,
+        "key.name" : "NMetaError",
+        "key.namelength" : 10,
+        "key.nameoffset" : 26,
+        "key.offset" : 21,
+        "key.parsed_declaration" : "public enum NMetaError: String, Error",
+        "key.parsed_scope.end" : 15,
+        "key.parsed_scope.start" : 3,
+        "key.substructure" : [
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 20,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 58,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case platformMissing<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>platformMissing<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 15,
+                "key.name" : "platformMissing",
+                "key.namelength" : 15,
+                "key.nameoffset" : 63,
+                "key.offset" : 63,
+                "key.parsed_declaration" : "case platformMissing",
+                "key.parsed_scope.end" : 4,
+                "key.parsed_scope.start" : 4,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO15platformMissingyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 23,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 83,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case environmentMissing<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>environmentMissing<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 18,
+                "key.name" : "environmentMissing",
+                "key.namelength" : 18,
+                "key.nameoffset" : 88,
+                "key.offset" : 88,
+                "key.parsed_declaration" : "case environmentMissing",
+                "key.parsed_scope.end" : 5,
+                "key.parsed_scope.start" : 5,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO18environmentMissingyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 19,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 111,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case versionMissing<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>versionMissing<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 14,
+                "key.name" : "versionMissing",
+                "key.namelength" : 14,
+                "key.nameoffset" : 116,
+                "key.offset" : 116,
+                "key.parsed_declaration" : "case versionMissing",
+                "key.parsed_scope.end" : 6,
+                "key.parsed_scope.start" : 6,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO14versionMissingyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 29,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 135,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case versionIsIncorrectFormat<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>versionIsIncorrectFormat<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 24,
+                "key.name" : "versionIsIncorrectFormat",
+                "key.namelength" : 24,
+                "key.nameoffset" : 140,
+                "key.offset" : 140,
+                "key.parsed_declaration" : "case versionIsIncorrectFormat",
+                "key.parsed_scope.end" : 7,
+                "key.parsed_scope.start" : 7,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO24versionIsIncorrectFormatyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 20,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 169,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case deviceOsMissing<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>deviceOsMissing<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 15,
+                "key.name" : "deviceOsMissing",
+                "key.namelength" : 15,
+                "key.nameoffset" : 174,
+                "key.offset" : 174,
+                "key.parsed_declaration" : "case deviceOsMissing",
+                "key.parsed_scope.end" : 8,
+                "key.parsed_scope.start" : 8,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO15deviceOsMissingyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 18,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 194,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case deviceMissing<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>deviceMissing<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 13,
+                "key.name" : "deviceMissing",
+                "key.namelength" : 13,
+                "key.nameoffset" : 199,
+                "key.offset" : 199,
+                "key.parsed_declaration" : "case deviceMissing",
+                "key.parsed_scope.end" : 9,
+                "key.parsed_scope.start" : 9,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO13deviceMissingyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 18,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 217,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case headerMissing<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>headerMissing<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 13,
+                "key.name" : "headerMissing",
+                "key.namelength" : 13,
+                "key.nameoffset" : 222,
+                "key.offset" : 222,
+                "key.parsed_declaration" : "case headerMissing",
+                "key.parsed_scope.end" : 10,
+                "key.parsed_scope.start" : 10,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO13headerMissingyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 24,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 240,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case platformUnsupported<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>platformUnsupported<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 19,
+                "key.name" : "platformUnsupported",
+                "key.namelength" : 19,
+                "key.nameoffset" : 245,
+                "key.offset" : 245,
+                "key.parsed_declaration" : "case platformUnsupported",
+                "key.parsed_scope.end" : 11,
+                "key.parsed_scope.start" : 11,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO19platformUnsupportedyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 27,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 269,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case environmentUnsupported<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>environmentUnsupported<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 22,
+                "key.name" : "environmentUnsupported",
+                "key.namelength" : 22,
+                "key.nameoffset" : 274,
+                "key.offset" : 274,
+                "key.parsed_declaration" : "case environmentUnsupported",
+                "key.parsed_scope.end" : 12,
+                "key.parsed_scope.start" : 12,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO22environmentUnsupportedyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 18,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 301,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case headerIsEmpty<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>headerIsEmpty<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 13,
+                "key.name" : "headerIsEmpty",
+                "key.namelength" : 13,
+                "key.nameoffset" : 306,
+                "key.offset" : 306,
+                "key.parsed_declaration" : "case headerIsEmpty",
+                "key.parsed_scope.end" : 13,
+                "key.parsed_scope.start" : 13,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO13headerIsEmptyyA2CmF"
+              }
+            ]
+          },
+          {
+            "key.kind" : "source.lang.swift.decl.enumcase",
+            "key.length" : 32,
+            "key.namelength" : 0,
+            "key.nameoffset" : 0,
+            "key.offset" : 324,
+            "key.substructure" : [
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>case nMetaIsNotAttachedToRequest<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+                "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>nMetaIsNotAttachedToRequest<\/decl.name><\/decl.enumelement>",
+                "key.kind" : "source.lang.swift.decl.enumelement",
+                "key.length" : 27,
+                "key.name" : "nMetaIsNotAttachedToRequest",
+                "key.namelength" : 27,
+                "key.nameoffset" : 329,
+                "key.offset" : 329,
+                "key.parsed_declaration" : "case nMetaIsNotAttachedToRequest",
+                "key.parsed_scope.end" : 14,
+                "key.parsed_scope.start" : 14,
+                "key.typename" : "(NMetaError.Type) -> NMetaError",
+                "key.typeusr" : "$sy5NMeta0A5ErrorOACmcD",
+                "key.usr" : "s:5NMeta0A5ErrorO27nMetaIsNotAttachedToRequestyA2CmF"
+              }
+            ]
+          }
+        ],
+        "key.typename" : "NMetaError.Type",
+        "key.typeusr" : "$s5NMeta0A5ErrorOmD",
+        "key.usr" : "s:5NMeta0A5ErrorO"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.internal",
+        "key.annotated_decl" : "<Declaration>public enum NMetaError : <Type usr=\"s:SS\">String<\/Type>, <Type usr=\"s:s5ErrorP\">Error<\/Type><\/Declaration>",
+        "key.bodylength" : 1663,
+        "key.bodyoffset" : 394,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 10,
+            "key.offset" : 382
+          }
+        ],
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+        "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <decl.name>NMetaError<\/decl.name> : <ref.struct usr=\"s:SS\">String<\/ref.struct>, <ref.protocol usr=\"s:s5ErrorP\">Error<\/ref.protocol><\/decl.enum>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "AbortError"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 1698,
+        "key.name" : "NMetaError",
+        "key.namelength" : 10,
+        "key.nameoffset" : 370,
+        "key.offset" : 360,
+        "key.parsed_declaration" : "extension NMetaError: AbortError",
+        "key.parsed_scope.end" : 58,
+        "key.parsed_scope.start" : 17,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var identifier: <Type usr=\"s:SS\">String<\/Type> { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 399
+              }
+            ],
+            "key.bodylength" : 29,
+            "key.bodyoffset" : 430,
+            "key.doc.declaration" : "var identifier: String { get }",
+            "key.doc.full_as_xml" : "<Other><Name>identifier<\/Name><USR>s:9Debugging10DebuggableP10identifierSSvp<\/USR><Declaration>var identifier: String { get }<\/Declaration><CommentParts><Abstract><Para>Some unique identifier for this specific error. This will be used to create the <codeVoice>identifier<\/codeVoice> property. Do NOT use <codeVoice>String(reflecting: self)<\/codeVoice> or <codeVoice>String(describing: self)<\/codeVoice> or there will be infinite recursion<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.name" : "identifier",
+            "key.doc.type" : "Other",
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>identifier<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 54,
+            "key.name" : "identifier",
+            "key.namelength" : 10,
+            "key.nameoffset" : 410,
+            "key.offset" : 406,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:9Debugging10DebuggableP10identifierSSvp"
+              }
+            ],
+            "key.parsed_declaration" : "public var identifier: String",
+            "key.parsed_scope.end" : 20,
+            "key.parsed_scope.start" : 18,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:9Debugging10DebuggableP10identifierSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var reason: <Type usr=\"s:SS\">String<\/Type> { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 466
+              }
+            ],
+            "key.bodylength" : 892,
+            "key.bodyoffset" : 493,
+            "key.doc.declaration" : "override var reason: String { get }",
+            "key.doc.full_as_xml" : "<Other><Name>reason<\/Name><USR>s:5Vapor10AbortErrorP6reasonSSvp<\/USR><Declaration>override var reason: String { get }<\/Declaration><CommentParts><Abstract><Para>The human-readable (and hopefully understandable) reason for this error.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.name" : "reason",
+            "key.doc.type" : "Other",
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>reason<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 913,
+            "key.name" : "reason",
+            "key.namelength" : 6,
+            "key.nameoffset" : 477,
+            "key.offset" : 473,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:5Vapor10AbortErrorP6reasonSSvp"
+              },
+              {
+                "key.usr" : "s:9Debugging10DebuggableP6reasonSSvp"
+              }
+            ],
+            "key.parsed_declaration" : "public var reason: String",
+            "key.parsed_scope.end" : 41,
+            "key.parsed_scope.start" : 22,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5Vapor10AbortErrorP6reasonSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var status: <Type usr=\"s:8NIOHTTP118HTTPResponseStatusO\">HTTPResponseStatus<\/Type> { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1392
+              }
+            ],
+            "key.bodylength" : 624,
+            "key.bodyoffset" : 1431,
+            "key.doc.declaration" : "var status: NIOHTTP1.HTTPResponseStatus { get }",
+            "key.doc.full_as_xml" : "<Other><Name>status<\/Name><USR>s:5Vapor10AbortErrorP6status8NIOHTTP118HTTPResponseStatusOvp<\/USR><Declaration>var status: NIOHTTP1.HTTPResponseStatus { get }<\/Declaration><CommentParts><Abstract><Para>The HTTP status code this error will return.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.name" : "status",
+            "key.doc.type" : "Other",
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaError.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>status<\/decl.name>: <decl.var.type><ref.enum usr=\"s:8NIOHTTP118HTTPResponseStatusO\">HTTPResponseStatus<\/ref.enum><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 657,
+            "key.name" : "status",
+            "key.namelength" : 6,
+            "key.nameoffset" : 1403,
+            "key.offset" : 1399,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:5Vapor10AbortErrorP6status8NIOHTTP118HTTPResponseStatusOvp"
+              }
+            ],
+            "key.parsed_declaration" : "public var status: HTTPResponseStatus",
+            "key.parsed_scope.end" : 57,
+            "key.parsed_scope.start" : 43,
+            "key.typename" : "HTTPResponseStatus",
+            "key.typeusr" : "$s8NIOHTTP118HTTPResponseStatusOD",
+            "key.usr" : "s:5Vapor10AbortErrorP6status8NIOHTTP118HTTPResponseStatusOvp"
+          }
+        ],
+        "key.typename" : "NMetaError.Type",
+        "key.typeusr" : "$s5NMeta0A5ErrorOmD",
+        "key.usr" : "s:5NMeta0A5ErrorO"
+      }
+    ]
+  }
+}, {
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 2160,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.internal",
+        "key.annotated_decl" : "<Declaration>internal struct NMetaHandler<\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.internal",
+            "key.length" : 8,
+            "key.offset" : 26
+          }
+        ],
+        "key.bodylength" : 2102,
+        "key.bodyoffset" : 56,
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>internal<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>NMetaHandler<\/decl.name><\/decl.struct>",
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 2124,
+        "key.name" : "NMetaHandler",
+        "key.namelength" : 12,
+        "key.nameoffset" : 42,
+        "key.offset" : 35,
+        "key.parsed_declaration" : "internal struct NMetaHandler",
+        "key.parsed_scope.end" : 75,
+        "key.parsed_scope.start" : 4,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private let environment: <Type usr=\"s:7Service11EnvironmentV\">Environment<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 61
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>environment<\/decl.name>: <decl.var.type><ref.struct usr=\"s:7Service11EnvironmentV\">Environment<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 28,
+            "key.name" : "environment",
+            "key.namelength" : 11,
+            "key.nameoffset" : 73,
+            "key.offset" : 69,
+            "key.parsed_declaration" : "private let environment: Environment",
+            "key.parsed_scope.end" : 5,
+            "key.parsed_scope.start" : 5,
+            "key.typename" : "Environment",
+            "key.typeusr" : "$s7Service11EnvironmentVD",
+            "key.usr" : "s:5NMeta0A7HandlerV11environment33_4DD48FF98E212B32C5688B847AB3DB52LL7Service11EnvironmentVvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private let headerKey: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 102
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>headerKey<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 21,
+            "key.name" : "headerKey",
+            "key.namelength" : 9,
+            "key.nameoffset" : 114,
+            "key.offset" : 110,
+            "key.parsed_declaration" : "private let headerKey: String",
+            "key.parsed_scope.end" : 6,
+            "key.parsed_scope.start" : 6,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5NMeta0A7HandlerV9headerKey33_4DD48FF98E212B32C5688B847AB3DB52LLSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private let platforms: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 136
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>platforms<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.name" : "platforms",
+            "key.namelength" : 9,
+            "key.nameoffset" : 148,
+            "key.offset" : 144,
+            "key.parsed_declaration" : "private let platforms: [String]",
+            "key.parsed_scope.end" : 7,
+            "key.parsed_scope.start" : 7,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A7HandlerV9platforms33_4DD48FF98E212B32C5688B847AB3DB52LLSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private let environments: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 172
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>environments<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 26,
+            "key.name" : "environments",
+            "key.namelength" : 12,
+            "key.nameoffset" : 184,
+            "key.offset" : 180,
+            "key.parsed_declaration" : "private let environments: [String]",
+            "key.parsed_scope.end" : 8,
+            "key.parsed_scope.start" : 8,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A7HandlerV12environments33_4DD48FF98E212B32C5688B847AB3DB52LLSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private let exceptPaths: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 211
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>exceptPaths<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 25,
+            "key.name" : "exceptPaths",
+            "key.namelength" : 11,
+            "key.nameoffset" : 223,
+            "key.offset" : 219,
+            "key.parsed_declaration" : "private let exceptPaths: [String]",
+            "key.parsed_scope.end" : 9,
+            "key.parsed_scope.start" : 9,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A7HandlerV11exceptPaths33_4DD48FF98E212B32C5688B847AB3DB52LLSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private let requiredEnvironments: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 249
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>requiredEnvironments<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 34,
+            "key.name" : "requiredEnvironments",
+            "key.namelength" : 20,
+            "key.nameoffset" : 261,
+            "key.offset" : 257,
+            "key.parsed_declaration" : "private let requiredEnvironments: [String]",
+            "key.parsed_scope.end" : 10,
+            "key.parsed_scope.start" : 10,
+            "key.typename" : "[String]",
+            "key.typeusr" : "$sSaySSGD",
+            "key.usr" : "s:5NMeta0A7HandlerV20requiredEnvironments33_4DD48FF98E212B32C5688B847AB3DB52LLSaySSGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>internal init(_ config: <Type usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/Type>) throws<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.internal",
+                "key.length" : 8,
+                "key.offset" : 297
+              }
+            ],
+            "key.bodylength" : 299,
+            "key.bodyoffset" : 342,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>internal<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>config<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 336,
+            "key.name" : "init(_:)",
+            "key.namelength" : 27,
+            "key.nameoffset" : 306,
+            "key.offset" : 306,
+            "key.parsed_declaration" : "internal init(_ config: NMetaConfig) throws",
+            "key.parsed_scope.end" : 19,
+            "key.parsed_scope.start" : 12,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaHandler.Type) -> (NMetaConfig) throws -> NMetaHandler",
+            "key.typeusr" : "$sy5NMeta0A7HandlerVAA0A6ConfigVKcD",
+            "key.usr" : "s:5NMeta0A7HandlerVyAcA0A6ConfigVKcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>internal func isMetaRequired(request: <Type usr=\"s:5Vapor7RequestC\">Request<\/Type>) throws -&gt; <Type usr=\"s:Sb\">Bool<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.internal",
+                "key.length" : 8,
+                "key.offset" : 648
+              }
+            ],
+            "key.bodylength" : 678,
+            "key.bodyoffset" : 711,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>internal<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>isMetaRequired<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>request<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:5Vapor7RequestC\">Request<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 733,
+            "key.name" : "isMetaRequired(request:)",
+            "key.namelength" : 32,
+            "key.nameoffset" : 662,
+            "key.offset" : 657,
+            "key.parsed_declaration" : "internal func isMetaRequired(request: Request) throws -> Bool",
+            "key.parsed_scope.end" : 46,
+            "key.parsed_scope.start" : 21,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaHandler) -> (Request) throws -> Bool",
+            "key.typeusr" : "$s7requestSb5Vapor7RequestC_tKcD",
+            "key.usr" : "s:5NMeta0A7HandlerV14isMetaRequired7requestSb5Vapor7RequestC_tKF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>internal func metaOrFail(request: <Type usr=\"s:5Vapor7RequestC\">Request<\/Type>) throws -&gt; <Type usr=\"s:5NMetaAAV\">NMeta<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.internal",
+                "key.length" : 8,
+                "key.offset" : 1396
+              }
+            ],
+            "key.bodylength" : 700,
+            "key.bodyoffset" : 1456,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>internal<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>metaOrFail<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>request<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:5Vapor7RequestC\">Request<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.struct usr=\"s:5NMetaAAV\">NMeta<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 752,
+            "key.name" : "metaOrFail(request:)",
+            "key.namelength" : 28,
+            "key.nameoffset" : 1410,
+            "key.offset" : 1405,
+            "key.parsed_declaration" : "internal func metaOrFail(request: Request) throws -> NMeta",
+            "key.parsed_scope.end" : 74,
+            "key.parsed_scope.start" : 48,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let meta: <Type usr=\"s:5NMetaAAV\">NMeta<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaHandler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>meta<\/decl.name>: <decl.var.type><ref.struct usr=\"s:5NMetaAAV\">NMeta<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 37,
+                "key.name" : "meta",
+                "key.namelength" : 4,
+                "key.nameoffset" : 1762,
+                "key.offset" : 1758,
+                "key.parsed_declaration" : "let meta = try NMeta(raw: metaString)",
+                "key.parsed_scope.end" : 60,
+                "key.parsed_scope.start" : 60,
+                "key.typename" : "NMeta",
+                "key.typeusr" : "$s5NMetaAAVD",
+                "key.usr" : "s:5NMeta0A7HandlerV10metaOrFail7requestA2AV5Vapor7RequestC_tKF0C0L_AFvp"
+              }
+            ],
+            "key.typename" : "(NMetaHandler) -> (Request) throws -> NMeta",
+            "key.typeusr" : "$s7request5NMetaABV5Vapor7RequestC_tKcD",
+            "key.usr" : "s:5NMeta0A7HandlerV10metaOrFail7requestA2AV5Vapor7RequestC_tKF"
+          }
+        ],
+        "key.typename" : "NMetaHandler.Type",
+        "key.typeusr" : "$s5NMeta0A7HandlerVmD",
+        "key.usr" : "s:5NMeta0A7HandlerV"
+      }
+    ]
+  }
+}, {
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 788,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public final class NMetaMiddleware : <Type usr=\"s:5Vapor10MiddlewareP\">Middleware<\/Type>, <Type usr=\"s:7Service0A4TypeP\">ServiceType<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.final",
+            "key.length" : 5,
+            "key.offset" : 46
+          },
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 39
+          }
+        ],
+        "key.bodylength" : 686,
+        "key.bodyoffset" : 100,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 10,
+            "key.offset" : 75
+          },
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 11,
+            "key.offset" : 87
+          }
+        ],
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>NMetaMiddleware<\/decl.name> : <ref.protocol usr=\"s:5Vapor10MiddlewareP\">Middleware<\/ref.protocol>, <ref.protocol usr=\"s:7Service0A4TypeP\">ServiceType<\/ref.protocol><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Middleware"
+          },
+          {
+            "key.name" : "ServiceType"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 735,
+        "key.name" : "NMetaMiddleware",
+        "key.namelength" : 15,
+        "key.nameoffset" : 58,
+        "key.offset" : 52,
+        "key.parsed_declaration" : "public final class NMetaMiddleware: Middleware, ServiceType",
+        "key.parsed_scope.end" : 27,
+        "key.parsed_scope.start" : 5,
+        "key.runtime_name" : "_TtC4main15NMetaMiddleware",
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public static func makeService(for container: <Type usr=\"s:7Service9ContainerP\">Container<\/Type>) throws -&gt; <Type usr=\"s:5NMeta0A10MiddlewareC\">NMetaMiddleware<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 105
+              }
+            ],
+            "key.bodylength" : 28,
+            "key.bodyoffset" : 189,
+            "key.doc.declaration" : "static func makeService(for container: Container) throws -> Self",
+            "key.doc.discussion" : [
+              {
+                "Para" : "See `ServiceFactory` for more information."
+              }
+            ],
+            "key.doc.full_as_xml" : "<Function><Name>makeService(for:)<\/Name><USR>s:7Service0A4TypeP04makeA03forxAA9Container_p_tKFZ<\/USR><Declaration>static func makeService(for container: Container) throws -&gt; Self<\/Declaration><CommentParts><Abstract><Para>Creates a new instance of the service for the supplied <codeVoice>Container<\/codeVoice>.<\/Para><\/Abstract><Discussion><Para>See <codeVoice>ServiceFactory<\/codeVoice> for more information.<\/Para><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.name" : "makeService(for:)",
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>makeService<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>for<\/decl.var.parameter.argument_label> <decl.var.parameter.name>container<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:7Service9ContainerP\">Container<\/ref.protocol><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:5NMeta0A10MiddlewareC\">NMetaMiddleware<\/ref.class><\/decl.function.returntype><\/decl.function.method.static>",
+            "key.kind" : "source.lang.swift.decl.function.method.static",
+            "key.length" : 106,
+            "key.name" : "makeService(for:)",
+            "key.namelength" : 37,
+            "key.nameoffset" : 124,
+            "key.offset" : 112,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Service0A4TypeP04makeA03forxAA9Container_p_tKFZ"
+              }
+            ],
+            "key.parsed_declaration" : "public static func makeService(for container: Container) throws -> NMetaMiddleware",
+            "key.parsed_scope.end" : 8,
+            "key.parsed_scope.start" : 6,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaMiddleware.Type) -> (Container) throws -> NMetaMiddleware",
+            "key.typeusr" : "$s3for5NMeta0B10MiddlewareC7Service9Container_p_tKcD",
+            "key.usr" : "s:7Service0A4TypeP04makeA03forxAA9Container_p_tKFZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init()<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 224
+              }
+            ],
+            "key.bodylength" : 0,
+            "key.bodyoffset" : 239,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>()<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 9,
+            "key.name" : "init()",
+            "key.namelength" : 6,
+            "key.nameoffset" : 231,
+            "key.offset" : 231,
+            "key.parsed_declaration" : "public init()",
+            "key.parsed_scope.end" : 10,
+            "key.parsed_scope.start" : 10,
+            "key.typename" : "(NMetaMiddleware.Type) -> () -> NMetaMiddleware",
+            "key.typeusr" : "$s5NMeta0A10MiddlewareCycD",
+            "key.usr" : "s:5NMeta0A10MiddlewareCACycfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func respond(to request: <Type usr=\"s:5Vapor7RequestC\">Request<\/Type>, chainingTo next: <Type usr=\"s:5Vapor9ResponderP\">Responder<\/Type>) throws -&gt; <Type usr=\"s:5Async6Futurea\">Future<\/Type>&lt;<Type usr=\"s:5Vapor8ResponseC\">Response<\/Type>&gt;<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 284
+              }
+            ],
+            "key.bodylength" : 381,
+            "key.bodyoffset" : 403,
+            "key.doc.column" : 17,
+            "key.doc.comment" : "See `Middleware.respond(to:)`",
+            "key.doc.declaration" : "public func respond(to request: Request, chainingTo next: Responder) throws -> Future<Response>",
+            "key.doc.file" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift\" line=\"13\" column=\"17\"><Name>respond(to:chainingTo:)<\/Name><USR>s:5NMeta0A10MiddlewareC7respond2to10chainingTo3NIO15EventLoopFutureCy5Vapor8ResponseCGAJ7RequestC_AJ9Responder_ptKF<\/USR><Declaration>public func respond(to request: Request, chainingTo next: Responder) throws -&gt; Future&lt;Response&gt;<\/Declaration><CommentParts><Abstract><Para>See <codeVoice>Middleware.respond(to:)<\/codeVoice><\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 13,
+            "key.doc.name" : "respond(to:chainingTo:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 34,
+            "key.docoffset" : 246,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>respond<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>to<\/decl.var.parameter.argument_label> <decl.var.parameter.name>request<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:5Vapor7RequestC\">Request<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>chainingTo<\/decl.var.parameter.argument_label> <decl.var.parameter.name>next<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:5Vapor9ResponderP\">Responder<\/ref.protocol><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.typealias usr=\"s:5Async6Futurea\">Future<\/ref.typealias>&lt;<ref.class usr=\"s:5Vapor8ResponseC\">Response<\/ref.class>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 494,
+            "key.name" : "respond(to:chainingTo:)",
+            "key.namelength" : 78,
+            "key.nameoffset" : 296,
+            "key.offset" : 291,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:5Vapor10MiddlewareP7respond2to10chainingTo3NIO15EventLoopFutureCyAA8ResponseCGAA7RequestC_AA9Responder_ptKF"
+              }
+            ],
+            "key.parsed_declaration" : "public func respond(\n    to request: Request,\n    chainingTo next: Responder\n) throws -> Future<Response>",
+            "key.parsed_scope.end" : 26,
+            "key.parsed_scope.start" : 13,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let config: <Type usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>config<\/decl.name>: <decl.var.type><ref.struct usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 47,
+                "key.name" : "config",
+                "key.namelength" : 6,
+                "key.nameoffset" : 417,
+                "key.offset" : 413,
+                "key.parsed_declaration" : "let config = try request.make(NMetaConfig.self)",
+                "key.parsed_scope.end" : 18,
+                "key.parsed_scope.start" : 18,
+                "key.typename" : "NMetaConfig",
+                "key.typeusr" : "$s5NMeta0A6ConfigVD",
+                "key.usr" : "s:5NMeta0A10MiddlewareC7respond2to10chainingTo3NIO15EventLoopFutureCy5Vapor8ResponseCGAJ7RequestC_AJ9Responder_ptKF6configL_AA0A6ConfigVvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let nMetaHandler: <Type usr=\"s:5NMeta0A7HandlerV\">NMetaHandler<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaMiddleware.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>nMetaHandler<\/decl.name>: <decl.var.type><ref.struct usr=\"s:5NMeta0A7HandlerV\">NMetaHandler<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 43,
+                "key.name" : "nMetaHandler",
+                "key.namelength" : 12,
+                "key.nameoffset" : 473,
+                "key.offset" : 469,
+                "key.parsed_declaration" : "let nMetaHandler = try NMetaHandler(config)",
+                "key.parsed_scope.end" : 19,
+                "key.parsed_scope.start" : 19,
+                "key.typename" : "NMetaHandler",
+                "key.typeusr" : "$s5NMeta0A7HandlerVD",
+                "key.usr" : "s:5NMeta0A10MiddlewareC7respond2to10chainingTo3NIO15EventLoopFutureCy5Vapor8ResponseCGAJ7RequestC_AJ9Responder_ptKF12nMetaHandlerL_AA0aP0Vvp"
+              }
+            ],
+            "key.typename" : "(NMetaMiddleware) -> (Request, Responder) throws -> EventLoopFuture<Response>",
+            "key.typeusr" : "$s2to10chainingTo3NIO15EventLoopFutureCy5Vapor8ResponseCGAF7RequestC_AF9Responder_ptKcD",
+            "key.usr" : "s:5NMeta0A10MiddlewareC7respond2to10chainingTo3NIO15EventLoopFutureCy5Vapor8ResponseCGAJ7RequestC_AJ9Responder_ptKF"
+          }
+        ],
+        "key.typename" : "NMetaMiddleware.Type",
+        "key.typeusr" : "$s5NMeta0A10MiddlewareCmD",
+        "key.usr" : "s:5NMeta0A10MiddlewareC"
+      }
+    ]
+  }
+}, {
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaProvider.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 578,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public final class NMetaProvider<\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.final",
+            "key.length" : 5,
+            "key.offset" : 36
+          },
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 29
+          }
+        ],
+        "key.bodylength" : 127,
+        "key.bodyoffset" : 63,
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaProvider.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>NMetaProvider<\/decl.name><\/decl.class>",
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 149,
+        "key.name" : "NMetaProvider",
+        "key.namelength" : 13,
+        "key.nameoffset" : 48,
+        "key.offset" : 42,
+        "key.parsed_declaration" : "public final class NMetaProvider",
+        "key.parsed_scope.end" : 10,
+        "key.parsed_scope.start" : 4,
+        "key.runtime_name" : "_TtC4main13NMetaProvider",
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let config: <Type usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 68
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaProvider.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>config<\/decl.name>: <decl.var.type><ref.struct usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.name" : "config",
+            "key.namelength" : 6,
+            "key.nameoffset" : 79,
+            "key.offset" : 75,
+            "key.parsed_declaration" : "public let config: NMetaConfig",
+            "key.parsed_scope.end" : 5,
+            "key.parsed_scope.start" : 5,
+            "key.typename" : "NMetaConfig",
+            "key.typeusr" : "$s5NMeta0A6ConfigVD",
+            "key.usr" : "s:5NMeta0A8ProviderC6configAA0A6ConfigVvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(config: <Type usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/Type> = NMetaConfig())<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 104
+              }
+            ],
+            "key.bodylength" : 34,
+            "key.bodyoffset" : 154,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaProvider.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>config<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:5NMeta0A6ConfigV\">NMetaConfig<\/ref.struct><\/decl.var.parameter.type> = NMetaConfig()<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 78,
+            "key.name" : "init(config:)",
+            "key.namelength" : 41,
+            "key.nameoffset" : 111,
+            "key.offset" : 111,
+            "key.parsed_declaration" : "public init(config: NMetaConfig = NMetaConfig())",
+            "key.parsed_scope.end" : 9,
+            "key.parsed_scope.start" : 7,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaProvider.Type) -> (NMetaConfig) -> NMetaProvider",
+            "key.typeusr" : "$s6config5NMeta0B8ProviderCAB0B6ConfigV_tcD",
+            "key.usr" : "s:5NMeta0A8ProviderC6configAcA0A6ConfigV_tcfc"
+          }
+        ],
+        "key.typename" : "NMetaProvider.Type",
+        "key.typeusr" : "$s5NMeta0A8ProviderCmD",
+        "key.usr" : "s:5NMeta0A8ProviderC"
+      },
+      {
+        "key.kind" : "source.lang.swift.syntaxtype.comment.mark",
+        "key.length" : 16,
+        "key.name" : "MARK: - Provider",
+        "key.namelength" : 0,
+        "key.nameoffset" : 0,
+        "key.offset" : 196
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.internal",
+        "key.annotated_decl" : "<Declaration>public final class NMetaProvider<\/Declaration>",
+        "key.bodylength" : 328,
+        "key.bodyoffset" : 248,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 8,
+            "key.offset" : 238
+          }
+        ],
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaProvider.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>NMetaProvider<\/decl.name><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Provider"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 364,
+        "key.name" : "NMetaProvider",
+        "key.namelength" : 13,
+        "key.nameoffset" : 223,
+        "key.offset" : 213,
+        "key.parsed_declaration" : "extension NMetaProvider: Provider",
+        "key.parsed_scope.end" : 25,
+        "key.parsed_scope.start" : 13,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func register(_ services: inout <Type usr=\"s:7Service8ServicesV\">Services<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 253
+              }
+            ],
+            "key.bodylength" : 162,
+            "key.bodyoffset" : 303,
+            "key.doc.declaration" : "func register(_ services: inout Service.Services) throws",
+            "key.doc.discussion" : [
+              {
+                "CodeListing" : ""
+              }
+            ],
+            "key.doc.full_as_xml" : "<Function><Name>register(_:)<\/Name><USR>s:7Service8ProviderP8registeryyAA8ServicesVzKF<\/USR><Declaration>func register(_ services: inout Service.Services) throws<\/Declaration><CommentParts><Abstract><Para>Register all services you would like to provide the <codeVoice>Container<\/codeVoice> here.<\/Para><\/Abstract><Discussion><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[services.register(RedisCache.self)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.name" : "register(_:)",
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaProvider.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>register<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>services<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.keyword>inout<\/syntaxtype.keyword> <ref.struct usr=\"s:7Service8ServicesV\">Services<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 206,
+            "key.name" : "register(_:)",
+            "key.namelength" : 36,
+            "key.nameoffset" : 265,
+            "key.offset" : 260,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Service8ProviderP8registeryyAA8ServicesVzKF"
+              }
+            ],
+            "key.parsed_declaration" : "public func register(_ services: inout Services)",
+            "key.parsed_scope.end" : 20,
+            "key.parsed_scope.start" : 14,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaProvider) -> (inout Services) -> ()",
+            "key.typeusr" : "$syy7Service8ServicesVzcD",
+            "key.usr" : "s:7Service8ProviderP8registeryyAA8ServicesVzKF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func didBoot(_ container: <Type usr=\"s:7Service9ContainerP\">Container<\/Type>) -&gt; <Type usr=\"s:5Async6Futurea\">Future<\/Type>&lt;<Type usr=\"s:s4Voida\">Void<\/Type>&gt;<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 472
+              }
+            ],
+            "key.bodylength" : 41,
+            "key.bodyoffset" : 533,
+            "key.doc.declaration" : "func didBoot(_ container: Container) throws -> NIO.EventLoopFuture<Void>",
+            "key.doc.full_as_xml" : "<Function><Name>didBoot(_:)<\/Name><USR>s:7Service8ProviderP7didBooty3NIO15EventLoopFutureCyytGAA9Container_pKF<\/USR><Declaration>func didBoot(_ container: Container) throws -&gt; NIO.EventLoopFuture&lt;Void&gt;<\/Declaration><CommentParts><Abstract><Para>Called after the container has fully initialized and after <codeVoice>willBoot(_:)<\/codeVoice>.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.name" : "didBoot(_:)",
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/NMetaProvider.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>didBoot<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>container<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:7Service9ContainerP\">Container<\/ref.protocol><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.typealias usr=\"s:5Async6Futurea\">Future<\/ref.typealias>&lt;<ref.typealias usr=\"s:s4Voida\">Void<\/ref.typealias>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 96,
+            "key.name" : "didBoot(_:)",
+            "key.namelength" : 31,
+            "key.nameoffset" : 484,
+            "key.offset" : 479,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:7Service8ProviderP7didBooty3NIO15EventLoopFutureCyytGAA9Container_pKF"
+              }
+            ],
+            "key.parsed_declaration" : "public func didBoot(_ container: Container) -> Future<Void>",
+            "key.parsed_scope.end" : 24,
+            "key.parsed_scope.start" : 22,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(NMetaProvider) -> (Container) -> EventLoopFuture<()>",
+            "key.typeusr" : "$sy3NIO15EventLoopFutureCyytG7Service9Container_pcD",
+            "key.usr" : "s:7Service8ProviderP7didBooty3NIO15EventLoopFutureCyytGAA9Container_pKF"
+          }
+        ],
+        "key.typename" : "NMetaProvider.Type",
+        "key.typeusr" : "$s5NMeta0A8ProviderCmD",
+        "key.usr" : "s:5NMeta0A8ProviderC"
+      }
+    ]
+  }
+}, {
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Request+NMeta.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 238,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.internal",
+        "key.annotated_decl" : "<Declaration>final class Request : <Type usr=\"s:7Service14ContainerAliasP\">ContainerAlias<\/Type>, <Type usr=\"s:11DatabaseKit0A11ConnectableP\">DatabaseConnectable<\/Type>, <Type usr=\"s:5Vapor20HTTPMessageContainerP\">HTTPMessageContainer<\/Type>, <Type usr=\"s:5Vapor14RequestCodablea\">RequestCodable<\/Type>, <Type usr=\"s:s23CustomStringConvertibleP\">CustomStringConvertible<\/Type>, <Type usr=\"s:s28CustomDebugStringConvertibleP\">CustomDebugStringConvertible<\/Type><\/Declaration>",
+        "key.bodylength" : 203,
+        "key.bodyoffset" : 33,
+        "key.doc.declaration" : "final class Request : ContainerAlias, DatabaseConnectable, HTTPMessageContainer, RequestCodable, CustomStringConvertible, CustomDebugStringConvertible",
+        "key.doc.discussion" : [
+          {
+            "Para" : "Use `Request` to access information about the `HTTPRequest` (`req.http`)."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "You can also use `Request` to create services you may need while generating a response (`req.make()`)."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "`Request` also carries a `ParametersContainer` for routing. Use `parameters` to fetch parameterized values."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "`Request` is `DatabaseConnectable`, meaning you can use it in-place of an actual `DatabaseConnection`. When used as a connection, the request will fetch a connection from the event loop’s connection pool and cache the connection for the lifetime of the request."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "See `HTTPRequest`, `Container`, `ParameterContainer`, and `DatabaseConnectable` for more information."
+          }
+        ],
+        "key.doc.full_as_xml" : "<Class><Name>Request<\/Name><USR>s:5Vapor7RequestC<\/USR><Declaration>final class Request : ContainerAlias, DatabaseConnectable, HTTPMessageContainer, RequestCodable, CustomStringConvertible, CustomDebugStringConvertible<\/Declaration><CommentParts><Abstract><Para><codeVoice>Request<\/codeVoice> is a service-container wrapper around an <codeVoice>HTTPRequest<\/codeVoice>.<\/Para><\/Abstract><Discussion><Para>Use <codeVoice>Request<\/codeVoice> to access information about the <codeVoice>HTTPRequest<\/codeVoice> (<codeVoice>req.http<\/codeVoice>).<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(req.http.url.path) \/\/ \"\/hello\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>You can also use <codeVoice>Request<\/codeVoice> to create services you may need while generating a response (<codeVoice>req.make()<\/codeVoice>).<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let client = try req.make(Client.self)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(client) \/\/ Client]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[client.get(\"http:\/\/vapor.codes\")]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para><codeVoice>Request<\/codeVoice> also carries a <codeVoice>ParametersContainer<\/codeVoice> for routing. Use <codeVoice>parameters<\/codeVoice> to fetch parameterized values.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[router.get(\"hello\", String.parameter) { req -> String in]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    let name = try req.parameters.next(String.self)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    return \"Hello, \\(name)!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para><codeVoice>Request<\/codeVoice> is <codeVoice>DatabaseConnectable<\/codeVoice>, meaning you can use it in-place of an actual <codeVoice>DatabaseConnection<\/codeVoice>. When used as a connection, the request will fetch a connection from the event loop’s connection pool and cache the connection for the lifetime of the request.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let users = User.query(on: req).all()]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>See <codeVoice>HTTPRequest<\/codeVoice>, <codeVoice>Container<\/codeVoice>, <codeVoice>ParameterContainer<\/codeVoice>, and <codeVoice>DatabaseConnectable<\/codeVoice> for more information.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.name" : "Request",
+        "key.doc.type" : "Class",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Request<\/decl.name> : <ref.protocol usr=\"s:7Service14ContainerAliasP\">ContainerAlias<\/ref.protocol>, <ref.protocol usr=\"s:11DatabaseKit0A11ConnectableP\">DatabaseConnectable<\/ref.protocol>, <ref.protocol usr=\"s:5Vapor20HTTPMessageContainerP\">HTTPMessageContainer<\/ref.protocol>, <ref.typealias usr=\"s:5Vapor14RequestCodablea\">RequestCodable<\/ref.typealias>, <ref.protocol usr=\"s:s23CustomStringConvertibleP\">CustomStringConvertible<\/ref.protocol>, <ref.protocol usr=\"s:s28CustomDebugStringConvertibleP\">CustomDebugStringConvertible<\/ref.protocol><\/decl.class>",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 223,
+        "key.modulename" : "Vapor",
+        "key.name" : "Request",
+        "key.namelength" : 7,
+        "key.nameoffset" : 24,
+        "key.offset" : 14,
+        "key.parsed_declaration" : "extension Request",
+        "key.parsed_scope.end" : 11,
+        "key.parsed_scope.start" : 3,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func nMeta() throws -&gt; <Type usr=\"s:5NMetaAAV\">NMeta<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 38
+              }
+            ],
+            "key.bodylength" : 159,
+            "key.bodyoffset" : 75,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Request+NMeta.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>nMeta<\/decl.name>() <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.struct usr=\"s:5NMetaAAV\">NMeta<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 190,
+            "key.name" : "nMeta()",
+            "key.namelength" : 7,
+            "key.nameoffset" : 50,
+            "key.offset" : 45,
+            "key.parsed_declaration" : "public func nMeta() throws -> NMeta",
+            "key.parsed_scope.end" : 10,
+            "key.parsed_scope.start" : 4,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Request) -> () throws -> NMeta",
+            "key.typeusr" : "$s5NMetaAAVyKcD",
+            "key.usr" : "s:5Vapor7RequestC5NMetaE5nMetaA2DVyKF"
+          }
+        ],
+        "key.typename" : "Request.Type",
+        "key.typeusr" : "$s5Vapor7RequestCmD",
+        "key.usr" : "s:5Vapor7RequestC"
+      }
+    ]
+  }
+}, {
+  "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 620,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct Version<\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 0
+          }
+        ],
+        "key.bodylength" : 595,
+        "key.bodyoffset" : 23,
+        "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Version<\/decl.name><\/decl.struct>",
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 612,
+        "key.name" : "Version",
+        "key.namelength" : 7,
+        "key.nameoffset" : 14,
+        "key.offset" : 7,
+        "key.parsed_declaration" : "public struct Version",
+        "key.parsed_scope.end" : 22,
+        "key.parsed_scope.start" : 1,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let major: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 28
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>major<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 14,
+            "key.name" : "major",
+            "key.namelength" : 5,
+            "key.nameoffset" : 39,
+            "key.offset" : 35,
+            "key.parsed_declaration" : "public let major: Int",
+            "key.parsed_scope.end" : 2,
+            "key.parsed_scope.start" : 2,
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:5NMeta7VersionV5majorSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let minor: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 54
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>minor<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 14,
+            "key.name" : "minor",
+            "key.namelength" : 5,
+            "key.nameoffset" : 65,
+            "key.offset" : 61,
+            "key.parsed_declaration" : "public let minor: Int",
+            "key.parsed_scope.end" : 3,
+            "key.parsed_scope.start" : 3,
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:5NMeta7VersionV5minorSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let patch: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 80
+              }
+            ],
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>patch<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 14,
+            "key.name" : "patch",
+            "key.namelength" : 5,
+            "key.nameoffset" : 91,
+            "key.offset" : 87,
+            "key.parsed_declaration" : "public let patch: Int",
+            "key.parsed_scope.end" : 4,
+            "key.parsed_scope.start" : 4,
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:5NMeta7VersionV5patchSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var string: <Type usr=\"s:SS\">String<\/Type> { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 107
+              }
+            ],
+            "key.bodylength" : 49,
+            "key.bodyoffset" : 134,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>string<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 70,
+            "key.name" : "string",
+            "key.namelength" : 6,
+            "key.nameoffset" : 118,
+            "key.offset" : 114,
+            "key.parsed_declaration" : "public var string: String",
+            "key.parsed_scope.end" : 8,
+            "key.parsed_scope.start" : 6,
+            "key.typename" : "String",
+            "key.typeusr" : "$sSSD",
+            "key.usr" : "s:5NMeta7VersionV6stringSSvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(string: <Type usr=\"s:SS\">String<\/Type>) throws<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 190
+              }
+            ],
+            "key.bodylength" : 390,
+            "key.bodyoffset" : 226,
+            "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>string<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 420,
+            "key.name" : "init(string:)",
+            "key.namelength" : 20,
+            "key.nameoffset" : 197,
+            "key.offset" : 197,
+            "key.parsed_declaration" : "public init(string: String) throws",
+            "key.parsed_scope.end" : 21,
+            "key.parsed_scope.start" : 10,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let components: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>components<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 52,
+                "key.name" : "components",
+                "key.namelength" : 10,
+                "key.nameoffset" : 239,
+                "key.offset" : 235,
+                "key.parsed_declaration" : "let components = string.components(separatedBy: \".\")",
+                "key.parsed_scope.end" : 11,
+                "key.parsed_scope.start" : 11,
+                "key.typename" : "[String]",
+                "key.typeusr" : "$sSaySSGD",
+                "key.usr" : "s:5NMeta7VersionV6stringACSS_tKcfc10componentsL_SaySSGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var numbers: [<Type usr=\"s:Si\">Int<\/Type>]<\/Declaration>",
+                "key.filepath" : "\/Users\/emilmarashliev\/Projects\/n-meta\/Sources\/NMeta\/Version.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>numbers<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 51,
+                "key.name" : "numbers",
+                "key.namelength" : 7,
+                "key.nameoffset" : 300,
+                "key.offset" : 296,
+                "key.parsed_declaration" : "var numbers    = components.compactMap({ Int($0) })",
+                "key.parsed_scope.end" : 12,
+                "key.parsed_scope.start" : 12,
+                "key.typename" : "[Int]",
+                "key.typeusr" : "$sSaySiGD",
+                "key.usr" : "s:5NMeta7VersionV6stringACSS_tKcfc7numbersL_SaySiGvp"
+              }
+            ],
+            "key.typename" : "(Version.Type) -> (String) throws -> Version",
+            "key.typeusr" : "$s6string5NMeta7VersionVSS_tKcD",
+            "key.usr" : "s:5NMeta7VersionV6stringACSS_tKcfc"
+          }
+        ],
+        "key.typename" : "Version.Type",
+        "key.typeusr" : "$s5NMeta7VersionVmD",
+        "key.usr" : "s:5NMeta7VersionV"
+      }
+    ]
+  }
+}]

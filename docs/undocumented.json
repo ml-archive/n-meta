@@ -1,0 +1,285 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 4,
+      "symbol": "NMetaCache",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 6,
+      "symbol": "NMetaCache.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 9,
+      "symbol": "NMeta",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 18,
+      "symbol": "NMeta.platform",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 19,
+      "symbol": "NMeta.environment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 20,
+      "symbol": "NMeta.version",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 21,
+      "symbol": "NMeta.deviceOs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 22,
+      "symbol": "NMeta.device",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 24,
+      "symbol": "NMeta.init(raw:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMeta.swift",
+      "line": 73,
+      "symbol": "NMeta.init(platform:environment:version:deviceOs:device:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaConfig.swift",
+      "line": 7,
+      "symbol": "NMetaConfig.headerKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaConfig.swift",
+      "line": 10,
+      "symbol": "NMetaConfig.platforms",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaConfig.swift",
+      "line": 13,
+      "symbol": "NMetaConfig.environments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaConfig.swift",
+      "line": 16,
+      "symbol": "NMetaConfig.exceptPaths",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 3,
+      "symbol": "NMetaError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 4,
+      "symbol": "NMetaError.platformMissing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 5,
+      "symbol": "NMetaError.environmentMissing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 6,
+      "symbol": "NMetaError.versionMissing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 7,
+      "symbol": "NMetaError.versionIsIncorrectFormat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 8,
+      "symbol": "NMetaError.deviceOsMissing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 9,
+      "symbol": "NMetaError.deviceMissing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 10,
+      "symbol": "NMetaError.headerMissing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 11,
+      "symbol": "NMetaError.platformUnsupported",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 12,
+      "symbol": "NMetaError.environmentUnsupported",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 13,
+      "symbol": "NMetaError.headerIsEmpty",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 14,
+      "symbol": "NMetaError.nMetaIsNotAttachedToRequest",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaError.swift",
+      "line": 17,
+      "symbol": "NMetaError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaMiddleware.swift",
+      "line": 5,
+      "symbol": "NMetaMiddleware",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaMiddleware.swift",
+      "line": 10,
+      "symbol": "NMetaMiddleware.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaProvider.swift",
+      "line": 4,
+      "symbol": "NMetaProvider",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaProvider.swift",
+      "line": 5,
+      "symbol": "NMetaProvider.config",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaProvider.swift",
+      "line": 7,
+      "symbol": "NMetaProvider.init(config:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/NMetaProvider.swift",
+      "line": 13,
+      "symbol": "NMetaProvider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/Request+NMeta.swift",
+      "line": 4,
+      "symbol": "Request.nMeta()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/Version.swift",
+      "line": 1,
+      "symbol": "Version",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/Version.swift",
+      "line": 2,
+      "symbol": "Version.major",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/Version.swift",
+      "line": 3,
+      "symbol": "Version.minor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/Version.swift",
+      "line": 4,
+      "symbol": "Version.patch",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/Version.swift",
+      "line": 6,
+      "symbol": "Version.string",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emilmarashliev/Projects/n-meta/Sources/NMeta/Version.swift",
+      "line": 10,
+      "symbol": "Version.init(string:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/emilmarashliev/Projects/n-meta"
+}
