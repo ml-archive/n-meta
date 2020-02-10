@@ -39,7 +39,7 @@ Why not just use `User-Agent`?
 
 Update your `Package.swift` file.
 ```swift
-.package(url: "https://github.com/nodes-vapor/n-meta.git", from: "3.0.0-beta")
+.package(url: "https://github.com/nodes-vapor/n-meta.git", from: "3.0.0")
 ```
 
 ## Getting started 🚀
@@ -73,7 +73,6 @@ middlewares.use(NMetaMiddleware.self)
 ## 🏆 Credits
 
 This package is developed and maintained by the Vapor team at [Nodes](https://www.nodesagency.com).
-The package owner for this project is [Steffen](https://github.com/steffendsommer).
 
 
 ## 📄 License
