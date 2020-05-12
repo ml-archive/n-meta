@@ -18,7 +18,7 @@ If you're running an older version of Vapor then have a look here:
 
 - [Vapor 1.x](https://github.com/nodes-vapor/n-meta/tree/vapor-1)
 - [Vapor 2.x](https://github.com/nodes-vapor/n-meta/tree/vapor-2)
-- [Vapor 4.x](https://github.com/nodes-vapor/n-meta/tree/vapor-4)
+- [Vapor 3.x](https://github.com/nodes-vapor/n-meta/tree/vapor-3)
 
 
 
