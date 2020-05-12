@@ -1,10 +1,9 @@
-import Foundation
 import Vapor
 
 /// Config options for a `NMetaConfig`
-public struct NMetaConfig: ServiceType {
+public struct NMetaConfig {
     // The request header, which is meta data will be exctracted from
-    public let headerKey: String
+    public let headerName: String
 
     // The supported platforms
     public let platforms: [String]
@@ -26,15 +25,10 @@ public struct NMetaConfig: ServiceType {
         exceptPaths: [String] = [ "/js/*", "/css/*", "/images/*", "/favicons/*", "/admin/*"],
         requiredEnvironments: [String] = ["local", "development", "staging", "production"])
     {
-        self.headerKey = headerKey
+        self.headerName = headerKey
         self.platforms = platforms
         self.environments = environments
         self.exceptPaths = exceptPaths
         self.requiredEnvironments = requiredEnvironments
-    }
-
-    // Create default `NMetaConfig`.
-    public static func makeService(for worker: Container) throws -> NMetaConfig {
-        return self.init()
     }
 }

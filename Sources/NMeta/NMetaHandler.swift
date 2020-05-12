@@ -1,43 +1,42 @@
 import Vapor
-import HTTP
 
-internal struct NMetaHandler {
+public struct NMetaHandler {
     private let environment: Environment
-    private let headerKey: String
+    private let headerName: String
     private let platforms: [String]
     private let environments: [String]
     private let exceptPaths: [String]
     private let requiredEnvironments: [String]
 
-    internal init(_ config: NMetaConfig) throws {
+    init(config: NMetaConfig) throws {
         self.environment = try Environment.detect()
-        self.headerKey = config.headerKey
+        self.headerName = config.headerName
         self.platforms = config.platforms
         self.environments = config.environments
         self.exceptPaths = config.exceptPaths
         self.requiredEnvironments = config.requiredEnvironments
     }
 
-    internal func isMetaRequired(request: Request) throws -> Bool {
+    func isMetaRequired(request: Request) throws -> Bool {
         // Check required environments
         if !requiredEnvironments.contains(environment.name) {
             return false
         }
 
         // Bypass CORS requests
-        if request.http.method == .OPTIONS {
+        if request.method == .OPTIONS {
             return false
         }
 
         // Except paths
         for check: String in exceptPaths {
             // Check complete except paths
-            if check == request.http.urlString {
+            if check == request.url.description {
                 return false
             }
 
             // Check except paths and subfolders
-            if check.last == "*" && request.http.urlString.hasPrefix(String(check.dropLast())) {
+            if check.last == "*" && request.url.description.hasPrefix(String(check.dropLast())) {
                 return false
             }
         }
@@ -45,9 +44,9 @@ internal struct NMetaHandler {
         return true
     }
 
-    internal func metaOrFail(request: Request) throws -> NMeta {
+    func metaOrFail(request: Request) throws -> NMeta {
         guard
-            let metaString = request.http.headers.firstValue(name: HTTPHeaderName(headerKey))
+            let metaString = request.headers.first(name: headerName)
         else {
             throw NMetaError.headerMissing
         }

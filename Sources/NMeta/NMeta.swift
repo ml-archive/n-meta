@@ -1,12 +1,6 @@
-import Foundation
 import Vapor
 
-public class NMetaCache: Service {
-    internal var nMeta: NMeta?
-    public init() {}
-}
-
-public struct NMeta: Service {
+public struct NMeta {
     private enum RawMetaConfig {
         static let delimiter = ";"
         static let webPlatform = "web"
