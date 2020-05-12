@@ -18,7 +18,7 @@ public final class NMetaMiddleware: Middleware {
                 request.nMeta = try nMetaHandler.metaOrFail(request: request)
             }
         } catch(let error) {
-            request.application.console.error(error.localizedDescription, newLine: true)
+            return request.eventLoop.makeFailedFuture(error)
         }
         return next.respond(to: request)
     }
