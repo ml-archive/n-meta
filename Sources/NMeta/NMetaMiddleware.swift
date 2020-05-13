@@ -10,13 +10,7 @@ public final class NMetaMiddleware: Middleware {
         chainingTo next: Responder
     ) -> EventLoopFuture<Response> {
         do {
-            let config = request.application.nMeta.config
-            let nMetaHandler = try NMetaHandler(config: config)
-
-            if try nMetaHandler.isMetaRequired(request: request) {
-                // Extract and add meta to request.
-                request.nMeta = try nMetaHandler.metaOrFail(request: request)
-            }
+            try request.application.nMeta.assertValid(request: request)
         } catch(let error) {
             return request.eventLoop.makeFailedFuture(error)
         }

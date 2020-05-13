@@ -12,6 +12,7 @@ public enum NMetaError: String, Error {
     case environmentUnsupported
     case headerIsEmpty
     case nMetaIsNotAttachedToRequest
+    case ivalidHeaderFormat
 }
 
 extension NMetaError: AbortError {
@@ -37,6 +38,7 @@ extension NMetaError: AbortError {
             NMeta is not attached to request. This is most likely cause the middleware is not used
             on the route
         """
+        case .ivalidHeaderFormat: return "Invalid header format."
         }
     }
 
@@ -53,6 +55,7 @@ extension NMetaError: AbortError {
         case .environmentUnsupported: return .badRequest
         case .headerIsEmpty: return .badRequest
         case .nMetaIsNotAttachedToRequest: return .internalServerError
+        case .ivalidHeaderFormat: return .badRequest
         }
     }
 }
