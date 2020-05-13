@@ -20,8 +20,6 @@ If you're running an older version of Vapor then have a look here:
 - [Vapor 2.x](https://github.com/nodes-vapor/n-meta/tree/vapor-2)
 - [Vapor 3.x](https://github.com/nodes-vapor/n-meta/tree/vapor-3)
 
-
-
 This header can look like this `android;production;1.2.3;4.4;Samsung S7`
  - platform
  - environment
@@ -59,30 +57,24 @@ Update your `Package.swift` file.
 
 ## Getting started 🚀
 
-Register the provider in `configure.swift`:
+Configure NMeta as per your needs, for example: 
 
 ```swift
-import NMeta
+app.nMeta = .init(exceptPath: ["/admin"])
 ```
 
-```
-try services.register(NMetaProvider())
-```
-
-You can supply your own `NMetaConfig` to the provider if needed.
-
-Next, add the middleware directly to your routes:
+Next, add the middleware directly to your routes (e.g. in `routes.swift`):
 
 ```swift
-router.grouped(NMetaMiddleware()).get("hello") { req in
-    return "Hello, world!"
+app.grouped(NMetaMiddleware()).get("hello") { req in
+    "Hello, world!"
 }
 ```
 
 or add the middleware globally (e.g. in `configure.swift`) which will add it to all routes:
 
 ```swift
-middlewares.use(NMetaMiddleware.self)
+app.middlewares.use(NMetaMiddleware())
 ```
 
 ## 🏆 Credits
