@@ -10,31 +10,24 @@ public extension Request {
         public let platform: String
         public let environment: String
         public let version: Version
-        public let deviceOs: String
+        public let deviceOS: String
         public let device: String
         
-        init?(request: Request) {
+        init(request: Request) throws {
             guard let metaString = request.headers.first(name: request.application.nMeta.headerName) else {
-                return nil
+                throw NMetaError.headerMissing
             }
+
             var components = metaString.components(separatedBy: ";")
 
-            // Platform.
-            self.platform = components.removeFirst()
-
-            // Environment.
-            self.environment = components.removeFirst()
-
-            // Version.
-            guard let version = try? Version(string: components.removeFirst()) else {
-                return nil
+            guard components.count == 5 else {
+                throw NMetaError.ivalidHeaderFormat
             }
-            self.version = version
 
-            // Device OS.
-            self.deviceOs = components.removeFirst()
-
-            // Device.
+            self.platform = components.removeFirst()
+            self.environment = components.removeFirst()
+            self.version = try Version(string: components.removeFirst())
+            self.deviceOS = components.removeFirst()
             self.device = components.removeFirst()
         }
     }
@@ -43,7 +36,7 @@ public extension Request {
         get {
             if let nMeta = storage[NMetaKey.self] {
                 return nMeta
-            } else if let nMeta = NMeta(request: self) {
+            } else if let nMeta = try? NMeta(request: self) {
                 storage[NMetaKey.self] = nMeta
                 return nMeta
             } else {

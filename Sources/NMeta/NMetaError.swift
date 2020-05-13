@@ -5,40 +5,36 @@ public enum NMetaError: String, Error {
     case environmentMissing
     case versionMissing
     case versionIsIncorrectFormat
-    case deviceOsMissing
+    case deviceOSMissing
     case deviceMissing
     case headerMissing
     case platformUnsupported
     case environmentUnsupported
-    case headerIsEmpty
     case nMetaIsNotAttachedToRequest
     case ivalidHeaderFormat
 }
 
 extension NMetaError: AbortError {
-    public var identifier: String {
-        return rawValue
-    }
+    public var identifier: String { rawValue }
 
     public var reason: String {
         switch self {
-        case .platformMissing: return "Platform missing"
-        case .environmentMissing: return "Environment missing"
-        case .versionMissing: return "Version missing"
+        case .platformMissing: return "NMeta: Platform missing"
+        case .environmentMissing: return "NMeta: Environment missing"
+        case .versionMissing: return "NMeta: Version missing"
         case .versionIsIncorrectFormat: return """
-            Version format incorrect. Format is 1.2.3 (major.minor.patch)
+            NMeta: Version format incorrect. Format is 1.2.3 (major.minor.patch)
         """
-        case .deviceOsMissing: return "DeviceOs missing"
-        case .deviceMissing: return "Device missing"
-        case .headerMissing: return "Header missing"
-        case .platformUnsupported: return "Platform unsupported"
-        case .environmentUnsupported: return "Environment unsupported"
-        case .headerIsEmpty: return "Header is empty"
+        case .deviceOSMissing: return "NMeta: DeviceOS missing"
+        case .deviceMissing: return "NMeta: Device missing"
+        case .headerMissing: return "NMeta: Header missing"
+        case .platformUnsupported: return "NMeta: Platform unsupported"
+        case .environmentUnsupported: return "NMeta: Environment unsupported"
         case .nMetaIsNotAttachedToRequest: return """
             NMeta is not attached to request. This is most likely cause the middleware is not used
-            on the route
+            on the route.
         """
-        case .ivalidHeaderFormat: return "Invalid header format."
+        case .ivalidHeaderFormat: return "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
         }
     }
 
@@ -48,12 +44,11 @@ extension NMetaError: AbortError {
         case .environmentMissing: return .badRequest
         case .versionMissing: return .badRequest
         case .versionIsIncorrectFormat: return .badRequest
-        case .deviceOsMissing: return .badRequest
+        case .deviceOSMissing: return .badRequest
         case .deviceMissing: return .badRequest
         case .headerMissing: return .badRequest
         case .platformUnsupported: return .badRequest
         case .environmentUnsupported: return .badRequest
-        case .headerIsEmpty: return .badRequest
         case .nMetaIsNotAttachedToRequest: return .internalServerError
         case .ivalidHeaderFormat: return .badRequest
         }

@@ -4,22 +4,43 @@ private struct NMetaKey: StorageKey {
     typealias Value = Application.NMeta
 }
 
-extension Application {
+public extension Application {
     struct NMeta {
-        // The request header, which is meta data will be exctracted from
-        public let headerName: String = "N-Meta"
+        /// Request header where NMeta data will be extracted from
+        public var headerName: String
 
-        // The supported platforms
-        public let platforms: [String] = ["web", "android", "ios"]
+        /// Supported platforms
+        public var platforms: [String]
 
-        // The supported environments
-        public let environments: [String] = ["local", "development", "staging", "production"]
+        /// Supported environments
+        public var environments: [String]
 
-        // Ignore requirement on following paths
-        public let exceptPaths: [String] = ["/js/*", "/css/*", "/images/*", "/favicons/*", "/admin/*"]
+        /// Ignore requirement on following paths
+        public var exceptPaths: [String]
 
         /// Only check header on following environments
-        public let requiredEnvironments: [String] = ["local", "development", "staging", "production"]
+        public var requiredEnvironments: [String]
+
+        /// Create a new `NMeta` configuration value.
+        /// - Parameters:
+        ///   - headerName: the request header where NMeta data will be extracted from
+        ///   - platforms: supported platforms
+        ///   - environments: supported environments
+        ///   - exceptPaths: paths to ignore NMeta requirement on
+        ///   - requiredEnvironments: environments to check NMeta header for
+        public init(
+            headerName: String = "N-Meta",
+            platforms: [String] = ["web", "android", "ios"],
+            environments: [String] = ["local", "development", "staging", "production"],
+            exceptPaths: [String] = ["/js/*", "/css/*", "/images/*", "/favicons/*", "/admin/*"],
+            requiredEnvironments: [String] = ["local", "development", "staging", "production"]
+        ) {
+            self.headerName = headerName
+            self.platforms = platforms
+            self.environments = environments
+            self.exceptPaths = exceptPaths
+            self.requiredEnvironments = requiredEnvironments
+        }
 
         func assertValid(request: Request) throws {
             if try isMetaRequired(request: request) {
@@ -56,22 +77,8 @@ extension Application {
         }
 
         private func metaOrFail(request: Request) throws -> Request.NMeta {
-            guard
-                let metaString = request.headers.first(name: headerName)
-                else {
-                    throw NMetaError.headerMissing
-            }
+            let meta = try Request.NMeta(request: request)
 
-            if metaString.isEmpty {
-                throw NMetaError.headerIsEmpty
-            }
-
-            // Build meta header.
-            guard let meta = Request.NMeta(request: request) else {
-                throw NMetaError.ivalidHeaderFormat
-            }
-
-            // Validate meta header.
             // Validate platform.
             guard platforms.contains(meta.platform) else {
                 throw NMetaError.platformUnsupported
