@@ -20,8 +20,7 @@ jobs:
           name: Build and Run Tests
           no_output_timeout: 1800
           command: |
-            swift package generate-xcodeproj --enable-code-coverage    
-            xcodebuild -scheme NMeta-Package -enableCodeCoverage YES test | xcpretty
+            swift test -Xswiftc -DNOJSON
       - run:
           name: Report coverage to Codecov
           command: |

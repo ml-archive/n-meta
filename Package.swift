@@ -14,13 +14,15 @@ let package = Package(
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0")
     ],
     targets: [
+        
         .target(
             name: "NMeta",
             dependencies: [
                 .product(name: "Vapor", package: "vapor")
             ]),
-        .testTarget(
-            name: "NMetaTests",
-            dependencies: ["NMeta"]),
+        .testTarget(name: "NMetaTests", dependencies: [
+            .target(name: "NMeta"),
+            .product(name: "XCTVapor", package: "vapor"),
+        ])
     ]
 )

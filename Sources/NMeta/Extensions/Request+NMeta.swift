@@ -33,16 +33,7 @@ public extension Request {
     }
 
     var nMeta: NMeta? {
-        get {
-            if let nMeta = storage[NMetaKey.self] {
-                return nMeta
-            } else if let nMeta = try? NMeta(request: self) {
-                storage[NMetaKey.self] = nMeta
-                return nMeta
-            } else {
-                return nil
-            }
-        }
+        get { storage[NMetaKey.self] }
         set { storage[NMetaKey.self] = newValue }
     }
 }
