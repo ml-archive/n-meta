@@ -21,7 +21,7 @@ public extension Request {
             var components = metaString.components(separatedBy: ";")
 
             guard components.count == 5 else {
-                throw NMetaError.ivalidHeaderFormat
+                throw NMetaError.invalidHeaderFormat
             }
 
             self.platform = components.removeFirst()
