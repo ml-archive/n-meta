@@ -26,7 +26,8 @@ public extension Application {
         ///   - headerName: the request header where NMeta data will be extracted from
         ///   - platforms: supported platforms
         ///   - environments: supported environments
-        ///   - exceptPaths: paths to ignore NMeta requirement on
+        ///   - exceptPaths:
+        ///   paths to ignore NMeta requirement on. Must start with `/` and may end with `/*` to match all sub-paths.
         ///   - requiredEnvironments: environments to check NMeta header for
         public init(
             headerName: String = "N-Meta",
