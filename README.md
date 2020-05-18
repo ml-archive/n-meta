@@ -1,6 +1,6 @@
 # N-Meta Ⓜ️
-[![Swift Version](https://img.shields.io/badge/Swift-4.1-brightgreen.svg)](http://swift.org)
-[![Vapor Version](https://img.shields.io/badge/Vapor-3-30B6FC.svg)](http://vapor.codes)
+[![Swift Version](https://img.shields.io/badge/Swift-5.2-brightgreen.svg)](http://swift.org)
+[![Vapor Version](https://img.shields.io/badge/Vapor-4-30B6FC.svg)](http://vapor.codes)
 [![Circle CI](https://circleci.com/gh/nodes-vapor/n-meta/tree/master.svg?style=shield)](https://circleci.com/gh/nodes-vapor/n-meta)
 [![codebeat badge](https://codebeat.co/badges/5dfa4439-cd97-4210-8595-40b57830196a)](https://codebeat.co/projects/github-com-nodes-vapor-n-meta-master)
 [![codecov](https://codecov.io/gh/nodes-vapor/n-meta/branch/master/graph/badge.svg)](https://codecov.io/gh/nodes-vapor/n-meta)
@@ -18,7 +18,7 @@ If you're running an older version of Vapor then have a look here:
 
 - [Vapor 1.x](https://github.com/nodes-vapor/n-meta/tree/vapor-1)
 - [Vapor 2.x](https://github.com/nodes-vapor/n-meta/tree/vapor-2)
-
+- [Vapor 3.x](https://github.com/nodes-vapor/n-meta/tree/vapor-3)
 
 This header can look like this `android;production;1.2.3;4.4;Samsung S7`
  - platform
@@ -39,35 +39,42 @@ Why not just use `User-Agent`?
 
 Update your `Package.swift` file.
 ```swift
-.package(url: "https://github.com/nodes-vapor/n-meta.git", from: "3.0.0")
+    ...
+    dependencies: [
+        ...
+        .package(url: "https://github.com/nodes-vapor/n-meta.git", from: "4.0.0")
+    ],
+    targets: [
+        .target(
+            name: "App",
+            dependencies: [
+                ...
+                .product(name: "NMeta", package: "n-meta"),
+            ]
+        )
+        ...
 ```
 
 ## Getting started 🚀
 
-Register the provider in `configure.swift`:
+Configure NMeta as per your needs, for example: 
 
 ```swift
-import NMeta
+app.nMeta = .init(exceptPath: ["/admin"])
 ```
 
-```
-try services.register(NMetaProvider())
-```
-
-You can supply your own `NMetaConfig` to the provider if needed.
-
-Next, add the middleware directly to your routes:
+Next, add the middleware directly to your routes (e.g. in `routes.swift`):
 
 ```swift
-router.grouped(NMetaMiddleware()).get("hello") { req in
-    return "Hello, world!"
+app.grouped(NMetaMiddleware()).get("hello") { req in
+    "Hello, world!"
 }
 ```
 
 or add the middleware globally (e.g. in `configure.swift`) which will add it to all routes:
 
 ```swift
-middlewares.use(NMetaMiddleware.self)
+app.middlewares.use(NMetaMiddleware())
 ```
 
 ## 🏆 Credits

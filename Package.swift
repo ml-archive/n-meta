@@ -1,24 +1,28 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.2
 import PackageDescription
 
 let package = Package(
-    name: "NMeta",
-    products: [
-        .library(
-            name: "NMeta",
-            targets: ["NMeta"]),
+    name: "n-meta",
+    platforms: [
+       .macOS(.v10_15)
     ],
-    dependencies: [        
-        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0")
+    products: [
+        .library(name: "NMeta", targets: ["NMeta"])
+    ],
+
+    dependencies: [
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0")
     ],
     targets: [
+        
         .target(
             name: "NMeta",
             dependencies: [
-                "Vapor"
+                .product(name: "Vapor", package: "vapor")
             ]),
-        .testTarget(
-            name: "NMetaTests",
-            dependencies: ["NMeta"]),
+        .testTarget(name: "NMetaTests", dependencies: [
+            .target(name: "NMeta"),
+            .product(name: "XCTVapor", package: "vapor"),
+        ])
     ]
 )

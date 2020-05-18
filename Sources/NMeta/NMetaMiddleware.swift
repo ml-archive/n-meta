@@ -1,11 +1,6 @@
-import Async
-import HTTP
 import Vapor
 
-public final class NMetaMiddleware: Middleware, ServiceType {
-    public static func makeService(for container: Container) throws -> NMetaMiddleware {
-        return .init()
-    }
+public final class NMetaMiddleware: Middleware {
 
     public init() {}
 
@@ -13,15 +8,12 @@ public final class NMetaMiddleware: Middleware, ServiceType {
     public func respond(
         to request: Request,
         chainingTo next: Responder
-    ) throws -> Future<Response> {
-
-        let config = try request.make(NMetaConfig.self)
-        let nMetaHandler = try NMetaHandler(config)
-
-        if try nMetaHandler.isMetaRequired(request: request) {
-            // Extract and add meta to request.
-            try request.make(NMetaCache.self).nMeta = try nMetaHandler.metaOrFail(request: request)
+    ) -> EventLoopFuture<Response> {
+        do {
+            try request.application.nMeta.assertValid(request: request)
+        } catch(let error) {
+            return request.eventLoop.makeFailedFuture(error)
         }
-        return try next.respond(to: request)
+        return next.respond(to: request)
     }
 }
