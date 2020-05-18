@@ -1,6 +1,1 @@
-import XCTest
-@testable import NMetaTests
-
-XCTMain([
-    testCase(NMetaTests.allTests),
-])
+fatalError("Please use swift test --enable-test-discovery to run the tests instead")
