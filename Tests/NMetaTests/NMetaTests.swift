@@ -3,6 +3,7 @@ import XCTVapor
 
 class NMetaTests: XCTestCase {
     var app: Application!
+    var nMeta: Request.NMeta?
 
     let headerName = "N-Meta"
     let platforms = ["web", "android", "ios"]
@@ -17,6 +18,7 @@ class NMetaTests: XCTestCase {
 
     override func tearDown() {
         app.shutdown()
+        nMeta = nil
     }
 
     func testVersionFull() throws {
@@ -44,58 +46,109 @@ class NMetaTests: XCTestCase {
     }
 
     func testNMetaSuccess() throws {
-        app.grouped(NMetaMiddleware()).get("test-success") { req -> String in
-            XCTAssertEqual(req.nMeta?.platform, "android")
-            XCTAssertEqual(req.nMeta?.environment, "testing")
-            XCTAssertEqual(req.nMeta?.version.string, "1.2.3")
-            XCTAssertEqual(req.nMeta?.deviceOS, "4.4")
-            XCTAssertEqual(req.nMeta?.device, "Samsung S7")
-            return ""
-        }
-
         try app.test(
             .GET,
-            "test-success",
+            "",
             headers: [headerName: "android;testing;1.2.3;4.4;Samsung S7"]
         ) { res in
             XCTAssertEqual(res.status, .ok)
         }
 
+        let nMeta = try XCTUnwrap(self.nMeta)
+
+        XCTAssertEqual(nMeta.platform, "android")
+        XCTAssertEqual(nMeta.environment, "testing")
+        XCTAssertEqual(nMeta.version.string, "1.2.3")
+        XCTAssertEqual(nMeta.deviceOS, "4.4")
+        XCTAssertEqual(nMeta.device, "Samsung S7")
     }
 
     func testNMetaEmpty() throws {
-        try app.test(.GET, "test-bad-request", headers: [headerName: ""]) { res in
+        try app.test(.GET, "", headers: [headerName: ""]) { res in
             XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+            )
         }
+        XCTAssertNil(nMeta)
     }
-    
+
     func testNMetaMissingEnv() throws {
-        try app.test(.GET, "test-bad-request", headers: [headerName: "a"]) { res in
+        try app.test(.GET, "", headers: [headerName: "a"]) { res in
             XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+            )
         }
+        XCTAssertNil(nMeta)
     }
     
     func testNMetaMissingVersion() throws {
-        try app.test(.GET, "test-bad-request", headers: [headerName: "a;b"]) { res in
+        try app.test(.GET, "", headers: [headerName: "a;b"]) { res in
             XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+            )
         }
+        XCTAssertNil(nMeta)
     }
+
     func testNMetaMissingDeviceOs() throws {
-        try app.test(.GET, "test-bad-request", headers: [headerName: "a;b;c"]) { res in
+        try app.test(.GET, "", headers: [headerName: "a;b;c"]) { res in
             XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+            )
         }
+        XCTAssertNil(nMeta)
     }
 
     func testNMetaMissingDevice() throws {
-        try app.test(.GET, "test-bad-request", headers: [headerName: "a;b;c;d"]) { res in
+        try app.test(.GET, "", headers: [headerName: "a;b;c;d"]) { res in
             XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+            )
         }
+        XCTAssertNil(nMeta)
     }
 
     func testNMetaIncorrectVersion() throws {
-        try app.test(.GET, "test-bad-request", headers: [headerName: "a;b;c;d;e"]) { res in
+        try app.test(.GET, "", headers: [headerName: "a;b;c;d;e"]) { res in
             XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Invalid version format. Format is 1.2.3 (major.minor.patch)."
+            )
         }
+        XCTAssertNil(nMeta)
+    }
+
+    func testNMetaUnsupportedPlatform() throws {
+        try app.test(.GET, "", headers: [headerName: "a;b;1;d;e"]) { res in
+            XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Platform unsupported"
+            )
+        }
+        XCTAssertNil(nMeta)
+    }
+
+    func testNMetaUnsupportedEnvironment() throws {
+        try app.test(.GET, "", headers: [headerName: "web;b;1;d;e"]) { res in
+            XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                "NMeta: Environment unsupported"
+            )
+        }
+        XCTAssertNil(nMeta)
     }
 
     func configure(_ app: Application) {
@@ -105,9 +158,10 @@ class NMetaTests: XCTestCase {
         app.nMeta.exceptPaths = exceptPaths
         app.nMeta.requiredEnvironments = requiredEnvironments
         
-        app.grouped(NMetaMiddleware()).get("test-bad-request") { req -> String in
-             return ""
-         }
+        app.grouped(NMetaMiddleware()).get("") { req -> String in
+            self.nMeta = req.nMeta
+            return ""
+        }
     }
 
     static var allTests = [
@@ -121,6 +175,9 @@ class NMetaTests: XCTestCase {
         ("testNMetaMissingDeviceOs", testNMetaMissingDeviceOs),
         ("testNMetaMissingDevice", testNMetaMissingDevice),
         ("testNMetaIncorrectVersion", testNMetaIncorrectVersion),
-
     ]
+}
+
+private struct ErrorReponse: Decodable {
+    let reason: String
 }
