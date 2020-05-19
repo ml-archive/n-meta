@@ -1,5 +1,5 @@
 import XCTVapor
-@testable import NMeta
+import NMeta
 
 class NMetaTests: XCTestCase {
     var app: Application!
@@ -163,19 +163,6 @@ class NMetaTests: XCTestCase {
             return ""
         }
     }
-
-    static var allTests = [
-        ("testVersionFull", testVersionFull),
-        ("testVersionMinor", testVersionMinor),
-        ("testVersionPatch", testVersionPatch),
-        ("testNMetaSuccess", testNMetaSuccess),
-        ("testNMetaEmpty", testNMetaEmpty),
-        ("testNMetaMissingEnv", testNMetaMissingEnv),
-        ("testNMetaMissingVersion", testNMetaMissingVersion),
-        ("testNMetaMissingDeviceOs", testNMetaMissingDeviceOs),
-        ("testNMetaMissingDevice", testNMetaMissingDevice),
-        ("testNMetaIncorrectVersion", testNMetaIncorrectVersion),
-    ]
 }
 
 private struct ErrorReponse: Decodable {

@@ -1,11 +1,8 @@
 import Vapor
 
-private struct NMetaKey: StorageKey {
-    typealias Value = Application.NMeta
-}
-
 public extension Application {
     struct NMeta {
+
         /// Request header where NMeta data will be extracted from
         public var headerName: String
 
@@ -94,17 +91,21 @@ public extension Application {
         }
     }
 
+    private struct Key: StorageKey {
+        typealias Value = NMeta
+    }
+
     var nMeta: NMeta {
         get {
-            if let existing = storage[NMetaKey.self] {
+            if let existing = storage[Key.self] {
                 return existing
             } else {
                 let new = NMeta()
-                storage[NMetaKey.self] = new
+                storage[Key.self] = new
                 return new
             }
         }
 
-        set { storage[NMetaKey.self] = newValue }
+        set { storage[Key.self] = newValue }
     }
 }
