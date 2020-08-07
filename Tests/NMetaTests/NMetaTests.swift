@@ -220,4 +220,3 @@ class NMetaTests: XCTestCase {
 private struct ErrorReponse: Decodable {
     let reason: String
 }
-
