@@ -68,7 +68,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -79,7 +79,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -90,7 +90,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -101,7 +101,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -112,7 +112,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -150,6 +150,58 @@ class NMetaTests: XCTestCase {
         }
         XCTAssertNil(nMeta)
     }
+    
+    func testNMetaWebEnvironment() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web;testing"]
+        ) { res in
+            XCTAssertEqual(res.status, .ok)
+        }
+
+        let nMeta = try XCTUnwrap(self.nMeta)
+
+        XCTAssertEqual(nMeta.platform, "web")
+        XCTAssertEqual(nMeta.environment, "testing")
+        XCTAssertEqual(nMeta.version.string, "0.0.0")
+        XCTAssertEqual(nMeta.deviceOS, "N/A")
+        XCTAssertEqual(nMeta.device, "N/A")
+    }
+    
+    func testNMetaWebEnvironmentMoreThanTwoValues() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web;testing;something;else;here"]
+        ) { res in
+            XCTAssertEqual(res.status, .ok)
+        }
+
+        let nMeta = try XCTUnwrap(self.nMeta)
+
+        XCTAssertEqual(nMeta.platform, "web")
+        XCTAssertEqual(nMeta.environment, "testing")
+        XCTAssertEqual(nMeta.version.string, "0.0.0")
+        XCTAssertEqual(nMeta.deviceOS, "N/A")
+        XCTAssertEqual(nMeta.device, "N/A")
+    }
+
+    
+    func testNMetaWebEnvironmentMissingValue() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web"]
+        ) { res in
+            XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                NMetaError.invalidHeaderFormat.reason
+            )
+        }
+    }
+
 
     func configure(_ app: Application) {
         app.nMeta.headerName = headerName
@@ -168,3 +220,4 @@ class NMetaTests: XCTestCase {
 private struct ErrorReponse: Decodable {
     let reason: String
 }
+
