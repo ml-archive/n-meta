@@ -13,7 +13,7 @@ public extension Request {
         public let deviceOS: String
         public let device: String
         
-        private enum webEnvironment {
+        private enum WebEnvironment {
             static let platform = "web"
             static let versionString = "0.0.0"
             static let deviceOS = "N/A"
@@ -36,12 +36,12 @@ public extension Request {
             self.platform = components.removeFirst()
             self.environment = components.removeFirst()
             
-            if self.platform.lowercased() == webEnvironment.platform {
+            if self.platform.lowercased() == WebEnvironment.platform {
                 // We're in webland, so we set version, deviceOS and device to default values. If
                 // we need the real values we can get them from the user-agent
-                self.version = try Version(string: webEnvironment.versionString)
-                self.deviceOS = webEnvironment.deviceOS
-                self.device = webEnvironment.device
+                self.version = try Version(string: WebEnvironment.versionString)
+                self.deviceOS = WebEnvironment.deviceOS
+                self.device = WebEnvironment.device
             } else {
                 // We're going mobile. Therefore there _must_ be three values for us to use. If there is
                 // not, we give up

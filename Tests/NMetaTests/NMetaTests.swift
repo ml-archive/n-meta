@@ -169,7 +169,7 @@ class NMetaTests: XCTestCase {
         XCTAssertEqual(nMeta.device, "N/A")
     }
     
-    func testNMetaWebEnvironmentMoreThanTwoValues() throws {
+    func testNMetaWebEnvironmentWithMoreThanTwoValues() throws {
         try app.test(
             .GET,
             "",
@@ -186,7 +186,6 @@ class NMetaTests: XCTestCase {
         XCTAssertEqual(nMeta.deviceOS, "N/A")
         XCTAssertEqual(nMeta.device, "N/A")
     }
-
     
     func testNMetaWebEnvironmentMissingValue() throws {
         try app.test(
@@ -201,7 +200,6 @@ class NMetaTests: XCTestCase {
             )
         }
     }
-
 
     func configure(_ app: Application) {
         app.nMeta.headerName = headerName
