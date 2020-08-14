@@ -26,29 +26,32 @@ public extension Request {
             }
 
             var components = metaString.components(separatedBy: ";")
+            let componentsCount = components.count
             
             // As the web environment _does not_ need to have all 5 values we initially checks
             // that at least two components are present (platform and environment)
-            guard components.count >= 2 else {
+            guard componentsCount >= 2 else {
                 throw NMetaError.invalidHeaderFormat
             }
             
             self.platform = components.removeFirst()
             self.environment = components.removeFirst()
             
-            if self.platform.lowercased() == WebEnvironment.platform {
-                // We're in webland, so we set version, deviceOS and device to default values. If
-                // we need the real values we can get them from the user-agent
+            if self.platform.lowercased() == WebEnvironment.platform, componentsCount != 5 {
+                // We're in webland with not all 5 components given.
+                // Therefore we set version, deviceOS and device to default values.
+                // If we need the real values we can get them from the user-agent.
                 self.version = try Version(string: WebEnvironment.versionString)
                 self.deviceOS = WebEnvironment.deviceOS
                 self.device = WebEnvironment.device
             } else {
-                // We're going mobile. Therefore there _must_ be three values for us to use. If there is
+                // We're going mobile or have a web version with all five values.
+                // Therefore there _must_ be five values for us to use. If there is
                 // not, we give up
-                guard components.count == 3 else {
+                guard componentsCount == 5 else {
                     throw NMetaError.invalidHeaderFormat
                 }
-                
+
                 self.version = try Version(string: components.removeFirst())
                 self.deviceOS = components.removeFirst()
                 self.device = components.removeFirst()

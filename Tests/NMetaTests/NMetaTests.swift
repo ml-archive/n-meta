@@ -169,11 +169,11 @@ class NMetaTests: XCTestCase {
         XCTAssertEqual(nMeta.device, "N/A")
     }
     
-    func testNMetaWebEnvironmentWithMoreThanTwoValues() throws {
+    func testNMetaWebEnvironmentWithMoreThanTwoValuesValidVersion() throws {
         try app.test(
             .GET,
             "",
-            headers: [headerName: "web;testing;something;else;here"]
+            headers: [headerName: "web;testing;1.0.0;else;here"]
         ) { res in
             XCTAssertEqual(res.status, .ok)
         }
@@ -182,11 +182,25 @@ class NMetaTests: XCTestCase {
 
         XCTAssertEqual(nMeta.platform, "web")
         XCTAssertEqual(nMeta.environment, "testing")
-        XCTAssertEqual(nMeta.version.string, "0.0.0")
-        XCTAssertEqual(nMeta.deviceOS, "N/A")
-        XCTAssertEqual(nMeta.device, "N/A")
+        XCTAssertEqual(nMeta.version.string, "1.0.0")
+        XCTAssertEqual(nMeta.deviceOS, "else")
+        XCTAssertEqual(nMeta.device, "here")
     }
-    
+
+    func testNMetaWebEnvironmentWithMoreThanTwoValuesNotValidVersion() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web;testing;invalid;else;here"]
+        ) { res in
+            XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                NMetaError.invalidVersionFormat.reason
+            )
+        }
+    }
+
     func testNMetaWebEnvironmentMissingValue() throws {
         try app.test(
             .GET,
