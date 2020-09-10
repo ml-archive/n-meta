@@ -68,7 +68,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -79,7 +79,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -90,7 +90,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -101,7 +101,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -112,7 +112,7 @@ class NMetaTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
             XCTAssertEqual(
                 try res.content.decode(ErrorReponse.self).reason,
-                "NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device."
+                NMetaError.invalidHeaderFormat.reason
             )
         }
         XCTAssertNil(nMeta)
@@ -149,6 +149,70 @@ class NMetaTests: XCTestCase {
             )
         }
         XCTAssertNil(nMeta)
+    }
+    
+    func testNMetaWebEnvironment() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web;testing"]
+        ) { res in
+            XCTAssertEqual(res.status, .ok)
+        }
+
+        let nMeta = try XCTUnwrap(self.nMeta)
+
+        XCTAssertEqual(nMeta.platform, "web")
+        XCTAssertEqual(nMeta.environment, "testing")
+        XCTAssertEqual(nMeta.version.string, "0.0.0")
+        XCTAssertEqual(nMeta.deviceOS, "N/A")
+        XCTAssertEqual(nMeta.device, "N/A")
+    }
+    
+    func testNMetaWebEnvironmentWithMoreThanTwoValuesValidVersion() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web;testing;1.0.0;else;here"]
+        ) { res in
+            XCTAssertEqual(res.status, .ok)
+        }
+
+        let nMeta = try XCTUnwrap(self.nMeta)
+
+        XCTAssertEqual(nMeta.platform, "web")
+        XCTAssertEqual(nMeta.environment, "testing")
+        XCTAssertEqual(nMeta.version.string, "1.0.0")
+        XCTAssertEqual(nMeta.deviceOS, "else")
+        XCTAssertEqual(nMeta.device, "here")
+    }
+
+    func testNMetaWebEnvironmentWithMoreThanTwoValuesNotValidVersion() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web;testing;invalid;else;here"]
+        ) { res in
+            XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                NMetaError.invalidVersionFormat.reason
+            )
+        }
+    }
+
+    func testNMetaWebEnvironmentMissingValue() throws {
+        try app.test(
+            .GET,
+            "",
+            headers: [headerName: "web"]
+        ) { res in
+            XCTAssertEqual(res.status, .badRequest)
+            XCTAssertEqual(
+                try res.content.decode(ErrorReponse.self).reason,
+                NMetaError.invalidHeaderFormat.reason
+            )
+        }
     }
 
     func configure(_ app: Application) {

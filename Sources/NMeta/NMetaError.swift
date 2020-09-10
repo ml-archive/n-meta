@@ -16,7 +16,8 @@ extension NMetaError: AbortError {
         case .environmentUnsupported: return "NMeta: Environment unsupported"
         case .headerMissing: return "NMeta: Header missing"
         case .invalidHeaderFormat: return """
-            NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device.
+            NMeta: Invalid header format. Format is platform;environment;version;deviceOS;device
+            OR platform;environment if you are using web
             """
         case .invalidVersionFormat: return """
             NMeta: Invalid version format. Format is 1.2.3 (major.minor.patch).
