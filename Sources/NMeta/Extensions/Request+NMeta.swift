@@ -18,17 +18,21 @@ public extension Request {
                 throw NMetaError.headerMissing
             }
 
-            var components = metaString.components(separatedBy: ";")
+            let components = metaString.components(separatedBy: ";")
+            let componentsCount = components.count
 
-            guard components.count == 5 else {
+            guard
+                (components.first == "web" && componentsCount >= 2) ||
+                componentsCount == 5
+            else {
                 throw NMetaError.invalidHeaderFormat
             }
 
-            self.platform = components.removeFirst()
-            self.environment = components.removeFirst()
-            self.version = try Version(string: components.removeFirst())
-            self.deviceOS = components.removeFirst()
-            self.device = components.removeFirst()
+            self.platform = components[0]
+            self.environment = components[1]
+            self.version = try Version(string: componentsCount > 2 ? components[2] : "0.0.0")
+            self.deviceOS = componentsCount > 3 ? components[3] : "N/A"
+            self.device = componentsCount > 4 ? components[4] : "N/A"
         }
     }
 
@@ -37,4 +41,3 @@ public extension Request {
         set { storage[NMetaKey.self] = newValue }
     }
 }
-
