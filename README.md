@@ -11,7 +11,7 @@
 This package enforces clients to send a specific header in all requests:
 
 ```
-NMeta: [PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
+N-Meta: [PLATFORM];[ENVIRONMENT];[APP_VERSION];[DEVICE_OS];[DEVICE]
 ```
 
 If you're running an older version of Vapor then have a look here:
