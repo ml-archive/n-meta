@@ -7,16 +7,16 @@ public extension Application {
         public var headerName: String
 
         /// Supported platforms
-        public var platforms: [String]
+        public var platforms: Set<String>
 
         /// Supported environments
-        public var environments: [String]
+        public var environments: Set<String>
 
         /// Ignore requirement on following paths
         public var exceptPaths: [String]
 
         /// Only check header on following environments
-        public var requiredEnvironments: [String]
+        public var requiredEnvironments: Set<String>
 
         /// Create a new `NMeta` configuration value.
         /// - Parameters:
@@ -28,10 +28,10 @@ public extension Application {
         ///   - requiredEnvironments: environments to check NMeta header for
         public init(
             headerName: String = "N-Meta",
-            platforms: [String] = ["web", "android", "ios"],
-            environments: [String] = ["local", "development", "staging", "production"],
+            platforms: Set<String> = ["web", "android", "ios"],
+            environments: Set<String> = ["local", "development", "staging", "production"],
             exceptPaths: [String] = ["/js/*", "/css/*", "/images/*", "/favicons/*", "/admin/*"],
-            requiredEnvironments: [String] = ["local", "development", "staging", "production"]
+            requiredEnvironments: Set<String> = ["local", "development", "staging", "production"]
         ) {
             self.headerName = headerName
             self.platforms = platforms

@@ -6,10 +6,10 @@ class NMetaTests: XCTestCase {
     var nMeta: Request.NMeta?
 
     let headerName = "N-Meta"
-    let platforms = ["web", "android", "ios"]
-    let environments = ["testing"]
+    let platforms: Set<String> = ["web", "android", "ios"]
+    let environments: Set<String> = ["testing"]
     let exceptPaths = ["/js/*", "/css/*", "/images/*", "/favicons/*", "/admin/*"]
-    let requiredEnvironments = ["testing"]
+    let requiredEnvironments: Set<String> = ["testing"]
 
     override func setUp() {
         app = Application(.testing)
